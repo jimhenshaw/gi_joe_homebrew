@@ -1,0 +1,46 @@
+#config_version=6
+
+mode:
+    start_events: start_char_select
+    priority: 100
+    code: mpf.modes.carousel.code.carousel.Carousel
+    
+mode_settings:
+  selectable_items:
+    - duke
+    - scarlett
+    - snake_eyes
+    - cobra_commander
+    - destro
+    - baroness
+  select_item_events: s_start_active
+  next_item_events: s_flipper_right_active
+  previous_item_events: s_flipper_left_active
+    
+slide_player:
+    play_carousel:
+      char_select:
+        action: play
+      
+sound_player:
+  play_char_select_music:
+    char_select_music:
+      bus: music
+      priority: 50
+      loops: -1
+      
+  play_new_selection:
+    new_selection:
+      action: play
+      bus: effects
+      
+event_player:
+  mode_char_select_started: play_carousel, play_char_select_music
+  s_flipper_right_active: play_new_selection
+  s_flipper_left_active: play_new_selection
+  
+variable_player:
+  carousel_item_selected: 
+    selected_char:
+      action: set
+      string: (item)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://5o1d3oakl7ki"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_kbheo"]
+[ext_resource type="Texture2D" uid="uid://cr0jalwj8exch" path="res://images/char_sel/duke_char_sel.png" id="2_5q7sv"]
+
+[node name="CharSelectDuke" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kbheo")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="DukeCharSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_5q7sv")
+centered = false

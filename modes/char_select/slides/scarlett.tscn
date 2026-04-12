@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://is1woqlkhort"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_1e2ye"]
+[ext_resource type="Texture2D" uid="uid://b5atct8or83p5" path="res://images/char_sel/scarlett_char_sel.png" id="2_1e2ye"]
+
+[node name="CharSelectScarlett" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1e2ye")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="ScarlettCharSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_1e2ye")
+centered = false

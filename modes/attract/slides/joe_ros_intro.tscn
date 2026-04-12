@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuy5rn2lw0wdg"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_3r467"]
+[ext_resource type="VideoStream" uid="uid://dl83e00ycrf62" path="res://videos/gi_joe_ros_intro.ogv" id="2_3r467"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="3_veak8"]
+
+[node name="JoeROCIntro" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3r467")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 720.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+ratio = 1.777
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="AspectRatioContainer"]
+layout_mode = 2
+stream = ExtResource("2_3r467")
+autoplay = true
+expand = true
+script = ExtResource("3_veak8")
+end_behavior = 1
+events_when_stopped = "attract_slide_ended"
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

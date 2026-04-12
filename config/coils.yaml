@@ -1,0 +1,104 @@
+#config_version=6
+
+
+# As you add coils, you will define their name, number on the board, default_pulse.
+
+# Visit https://docs.missionpinball.org/en/latest/mechs/coils/ for additional information.
+
+#Board 3208
+coils:
+# Trough
+  # Name:
+  #   number: <IO1, IO2>-<integer> # number on io board
+  #   default_pulse_ms: <integer> # strength of coil
+
+
+  c_trough_eject_coil:
+    number: IO1-0
+    default_pulse_ms: 15
+
+#Slings
+
+  c_right_sling:
+    number: IO1-7
+    default_pulse_ms: 5
+    
+  c_left_sling:
+    number: IO1-8
+    default_pulse_ms: 5
+
+#Plunger
+
+  #c_auto_plunger:
+  #  number: 3208-0
+  #  default_pulse_ms: 15
+
+
+#Flippers
+
+  c_flipper_right_full:
+    number: IO1-1
+    default_pulse_ms: 6
+
+  c_flipper_right_hold:
+    number: IO1-2
+    default_hold_power: .4
+    allow_enable: true
+
+  c_flipper_left_upper_full:
+    number: IO1-5
+    default_pulse_ms: 6
+
+  c_flipper_left_upper_hold:
+    number: IO1-6
+    default_hold_power: .4
+    allow_enable: true
+    
+  c_flipper_left_lower_full:
+    number: IO1-3
+    default_pulse_ms: 6
+
+  c_flipper_left_lower_hold:
+    number: IO1-4
+    default_hold_power: .4
+    allow_enable: true
+    
+   # Pop Bumpers
+  c_pop_bumper_cc_1:
+    number: IO2-0
+    default_pulse_ms: 5
+  c_pop_bumper_cc_2:
+    number: IO2-3
+    default_pulse_ms: 5
+  c_pop_bumper_cc_3:
+    number: IO2-1
+    default_pulse_ms: 5
+  c_pop_bumper_m:
+    number: IO2-2
+    default_pulse_ms: 5 
+
+#Autofire devices are defined here by switch and what coil is cycled when that switch is active.
+
+autofire_coils:
+  # Pop Bumpers
+  pop_bumper_cc_1:
+    coil: c_pop_bumper_cc_1
+    switch: s_pop_bumper_cc_1
+  pop_bumper_cc_2:
+    coil: c_pop_bumper_cc_2
+    switch: s_pop_bumper_cc_2
+  pop_bumper_cc_3:
+    coil: c_pop_bumper_cc_3
+    switch: s_pop_bumper_cc_3
+  pop_bumper_m:
+    coil: c_pop_bumper_m
+    switch: s_pop_bumper_m
+    
+  # Slingshots
+  slingshot_right:
+    coil: c_right_sling
+    switch: s_slingshot_1
+    
+  slingshot_left:
+    coil: c_left_sling
+    switch: s_slingshot_2

@@ -1,0 +1,22 @@
+#config_version=6
+#attract mode config file
+
+
+slide_player:
+  mode_attract_started: joe_ros_intro
+
+  mode_attract_stopping:
+    joe_ros_intro:
+        action: remove
+
+show_player:
+    mode_attract_started:
+      attract_circle:
+        loops: -1
+        speed: 50
+      attract_pops:
+        loops: -1
+        speed: 50
+        
+event_player:
+  mode_attract_started: shake_shake_shake

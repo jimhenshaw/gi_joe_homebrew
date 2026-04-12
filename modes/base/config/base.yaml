@@ -1,0 +1,84 @@
+#config_version=6
+#base mode config file
+#Demo the following:
+# mode transitions (will work with just lower third)
+# virtual multiball (will work with just lower third)
+# how to show score on Godot (will work with just lower third)
+# light show
+# shots and flashing a light and turning it on when hit.
+
+mode:
+    start_events: ball_started
+    priority: 100
+    
+slide_player:
+  mode_base_started:
+    base:
+        action: play
+    attract:
+        action: remove
+        
+shot_profiles:       
+  green_flashing_lit_profile:
+    states:
+      - name: flashing
+        show: green_flashing
+      - name: lit
+        show: green_solid
+
+shots:
+  #Pop shots - will be flashing until hit, once hit, will be lit and remain lit
+  pop_1_shot:
+    switch: s_pop_bumper_cc_1
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_pop_1 }
+  pop_2_shot:
+    switch: s_pop_bumper_cc_2
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_pop_2 }
+  pop_3_shot:
+    switch: s_pop_bumper_cc_3
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_pop_3 }
+    
+  #Lane shots - will be flashing until hit, once hit, will be lit and remain lit
+  left_outlane_shot:
+    switch: s_left_outlane
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_left_outlane }
+  left_inlane_shot:
+    switch: s_left_inlane
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_left_inlane }
+  right_inlane_shot:
+    switch: s_right_inlane
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_right_inlane }
+  right_outlane_shot:
+    switch: s_right_outlane
+    profile: green_flashing_lit_profile
+    show_tokens: { light: l_right_outlane }
+        
+shot_groups:
+  pops_shot_group:
+    shots: pop_1_shot, pop_2_shot, pop_3_shot
+  lanes_shot_group:
+    shots: left_outlane_shot, left_inlane_shot, right_inlane_shot, right_outlane_shot
+    
+    
+event_player:
+  mode_base_started: start_char_select
+  pops_shot_group_lit_complete: start_mode_1
+  lanes_shot_group_lit_complete: start_mode_1
+  
+variable_player:
+  pops_shot_group_hit:
+    score: 100
+  lanes_shot_group_hit:
+    score: 100
+  
+multiballs:
+  mode_1_multiball:
+    ball_count: 3
+    ball_count_type: total
+    start_events: stop_mode_1

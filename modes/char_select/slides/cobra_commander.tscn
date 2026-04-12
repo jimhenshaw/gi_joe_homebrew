@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://birnxrf6e0bq5"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_od800"]
+[ext_resource type="Texture2D" uid="uid://dxroixx4vmwy6" path="res://images/char_sel/cobra_commander_char_sel.png" id="2_od800"]
+
+[node name="CharSelectCobraCommander" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_od800")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="CobraCommanderCharSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_od800")
+centered = false

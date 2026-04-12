@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dth36pkf4m4ty"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gok0c"]
+[ext_resource type="Texture2D" uid="uid://cwl8m6a8xj5lt" path="res://images/char_sel/snake_eyes_char_sel.png" id="2_gok0c"]
+
+[node name="CharSelectSnakeEyes" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gok0c")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="SnakeEyesCharSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_gok0c")
+centered = false

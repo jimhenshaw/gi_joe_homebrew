@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwp61ulojxlf6"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ue5l7"]
+[ext_resource type="Texture2D" uid="uid://yo4i5gmcfuva" path="res://images/char_sel/baroness_char_sel.png" id="2_ue5l7"]
+
+[node name="CharSelectBaroness" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ue5l7")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="BaronessCharSelect" type="Sprite2D" parent="."]
+texture = ExtResource("2_ue5l7")
+centered = false

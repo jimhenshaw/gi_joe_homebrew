@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://sosp7vs6eh4a"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_kbheo"]
+[ext_resource type="Script" uid="uid://dpe3dq8axt3g7" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_5q7sv"]
+[ext_resource type="PackedScene" uid="uid://5o1d3oakl7ki" path="res://modes/char_select/slides/duke.tscn" id="3_vtvvf"]
+[ext_resource type="PackedScene" uid="uid://is1woqlkhort" path="res://modes/char_select/slides/scarlett.tscn" id="4_vtvvf"]
+[ext_resource type="PackedScene" uid="uid://dth36pkf4m4ty" path="res://modes/char_select/slides/snake_eyes.tscn" id="5_v3hvo"]
+[ext_resource type="PackedScene" uid="uid://birnxrf6e0bq5" path="res://modes/char_select/slides/cobra_commander.tscn" id="6_hltu6"]
+[ext_resource type="PackedScene" uid="uid://nfqi8xt67jqd" path="res://modes/char_select/slides/destro.tscn" id="7_v3hvo"]
+[ext_resource type="PackedScene" uid="uid://bwp61ulojxlf6" path="res://modes/char_select/slides/baroness.tscn" id="8_4ftb5"]
+
+[node name="CharSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kbheo")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFCarousel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_5q7sv")
+carousel_name = "char_select"
+metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
+
+[node name="duke" parent="MPFCarousel" instance=ExtResource("3_vtvvf")]
+layout_mode = 0
+
+[node name="scarlett" parent="MPFCarousel" instance=ExtResource("4_vtvvf")]
+layout_mode = 0
+
+[node name="snake_eyes" parent="MPFCarousel" instance=ExtResource("5_v3hvo")]
+layout_mode = 0
+
+[node name="cobra_commander" parent="MPFCarousel" instance=ExtResource("6_hltu6")]
+layout_mode = 0
+
+[node name="destro" parent="MPFCarousel" instance=ExtResource("7_v3hvo")]
+layout_mode = 0
+
+[node name="baroness" parent="MPFCarousel" instance=ExtResource("8_4ftb5")]
+layout_mode = 0

@@ -1,0 +1,111 @@
+#config_version=6
+
+     
+
+#Can name these to match left, right, center, or however you want. The switch name defined here
+#Will be used in any modes where the switches are activated, etc.
+
+#3208 Board - Switches
+switches:
+  
+  # s_name:
+  #   number: <IO1,IO2>-<integer>
+  
+# Plunger
+
+  s_plunger:
+    number: IO1-27
+
+#Trough
+
+  s_trough_ball_jam:
+    number: IO1-6
+    type: 'NC'
+
+  s_trough_ball_1:
+    number: IO1-26
+    type: 'NC'
+
+  s_trough_ball_2:
+    number: IO1-28
+
+  s_trough_ball_3:
+    number: IO1-2
+
+  s_trough_ball_4:
+    number: IO1-3
+
+  s_trough_ball_5:
+    number: IO1-4
+
+  s_trough_ball_6:
+    number: IO1-5
+
+#Flippers
+  s_flipper_left:
+    number: IO1-30
+    tags: flipper_left
+    type: NC
+    debounce: normal
+  s_flipper_right:
+    number: IO1-31
+    tags: flipper_right
+    #type: NC
+    debounce: normal
+
+  s_flipper_left_upper_eos:
+    number: IO1-20
+    tags: flipper_left_upper_eos
+  s_flipper_left_lower_eos:
+    number: IO1-19
+    tags: flipper_left_lower_eos
+  s_flipper_right_eos:
+    number: IO1-18
+    tags: flipper_right_eos
+
+# Pop Bumpers
+  s_pop_bumper_cc_1:
+    number: IO2-18
+    tags: pop_bumper_cc_1, s_pops
+  s_pop_bumper_cc_2:
+    number: IO2-19
+    tags: pop_bumper_cc_2, s_pops
+  s_pop_bumper_cc_3:
+    number: IO2-22
+    tags: pop_bumper_cc_3, s_pops
+  s_pop_bumper_m:
+    number: IO2-20
+    tags: pop_bumper_m, s_pops
+    
+# Slingshot
+  s_slingshot_1:
+    number: IO1-17
+    tags: slingshot_switch
+  s_slingshot_2:
+    number: IO1-16
+    tags: slingshot_switch
+
+#Other Buttons
+
+  s_start:
+    number: IO1-29
+    tags: start
+    type: NC
+
+  #s_launch:
+  #  number: 3208-25
+  #  tags: start
+  
+#Lane Switches
+  s_left_outlane:
+    number:
+    tags: s_lanes
+  s_left_inlane:
+    number:
+    tags: s_lanes
+  s_right_inlane:
+    number:
+    tags: s_lanes
+  s_right_outlane:
+    number:
+    tags: s_lanes
