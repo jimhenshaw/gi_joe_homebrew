@@ -1,104 +1,76 @@
 #config_version=6
 
-
-# As you add coils, you will define their name, number on the board, default_pulse.
-
-# Visit https://docs.missionpinball.org/en/latest/mechs/coils/ for additional information.
-
-#Board 3208
 coils:
-# Trough
-  # Name:
-  #   number: <IO1, IO2>-<integer> # number on io board
-  #   default_pulse_ms: <integer> # strength of coil
-
-
-  c_trough_eject_coil:
-    number: IO1-0
-    default_pulse_ms: 15
-
-#Slings
-
-  c_right_sling:
-    number: IO1-7
-    default_pulse_ms: 5
+  #=====================
+  # Cabinet IO Coils
+  #=====================
+  # Cabinet IO Coin Door - J4
+  #---------------------
+  c_left_coin_driver:
+    number: cabinet-0
+    allow_enable: true
+    console_log: none
+    file_log: none
+  c_right_coin_driver:
+    number: cabinet-1
+    allow_enable: true
+    console_log: none
+    file_log: none
+  #---------------------
+  # Cabinet IO Left - J1
+  #---------------------
+  #unused:
+    #number: cabinet-2
+  c_start_driver:
+    number: cabinet-3
+    allow_enable: true
+    console_log: none
+    file_log: none
+  #---------------------
+  # Cabinet IO Right - J9
+  #---------------------
+  #unused:
+    #number: cabinet-4
+    #number: cabinet-5
     
+  #=====================
+  # Playfield IO 3208 Coils
+  #=====================
+  # J4 - Drivers 0-7
+  #---------------------
+  c_trough_eject:
+    number: playfield-0
+    default_pulse_ms: 12
+  c_auto_kicker:
+    number: playfield-1
+    default_pulse_ms: 18
   c_left_sling:
-    number: IO1-8
-    default_pulse_ms: 5
-
-#Plunger
-
-  #c_auto_plunger:
-  #  number: 3208-0
-  #  default_pulse_ms: 15
-
-
-#Flippers
-
-  c_flipper_right_full:
-    number: IO1-1
-    default_pulse_ms: 6
-
-  c_flipper_right_hold:
-    number: IO1-2
-    default_hold_power: .4
-    allow_enable: true
-
-  c_flipper_left_upper_full:
-    number: IO1-5
-    default_pulse_ms: 6
-
-  c_flipper_left_upper_hold:
-    number: IO1-6
-    default_hold_power: .4
-    allow_enable: true
-    
-  c_flipper_left_lower_full:
-    number: IO1-3
-    default_pulse_ms: 6
-
-  c_flipper_left_lower_hold:
-    number: IO1-4
-    default_hold_power: .4
-    allow_enable: true
-    
-   # Pop Bumpers
-  c_pop_bumper_cc_1:
-    number: IO2-0
-    default_pulse_ms: 5
-  c_pop_bumper_cc_2:
-    number: IO2-3
-    default_pulse_ms: 5
-  c_pop_bumper_cc_3:
-    number: IO2-1
-    default_pulse_ms: 5
-  c_pop_bumper_m:
-    number: IO2-2
-    default_pulse_ms: 5 
-
-#Autofire devices are defined here by switch and what coil is cycled when that switch is active.
+    number: playfield-2
+    default_pulse_ms: 15
+  c_right_sling:
+    number: playfield-3
+    default_pulse_ms: 15
+  c_lower_left_flipper_main:
+    number: playfield-4
+    default_pulse_ms: 25
+  c_lower_left_flipper_hold:
+    number: playfield-5
+    default_hold_power: .5
+  c_lower_right_flipper_main:
+    number: playfield-6
+    default_pulse_ms: 25
+  c_lower_right_flipper_hold:
+    number: playfield-7
+    default_hold_power: .5
 
 autofire_coils:
-  # Pop Bumpers
-  pop_bumper_cc_1:
-    coil: c_pop_bumper_cc_1
-    switch: s_pop_bumper_cc_1
-  pop_bumper_cc_2:
-    coil: c_pop_bumper_cc_2
-    switch: s_pop_bumper_cc_2
-  pop_bumper_cc_3:
-    coil: c_pop_bumper_cc_3
-    switch: s_pop_bumper_cc_3
-  pop_bumper_m:
-    coil: c_pop_bumper_m
-    switch: s_pop_bumper_m
-    
+  #=====================  
   # Slingshots
-  slingshot_right:
+  #=====================
+  afc_right_sling:
     coil: c_right_sling
-    switch: s_slingshot_1
+    switch: s_sling_left
     
-  slingshot_left:
+  afc_left_sling:
     coil: c_left_sling
-    switch: s_slingshot_2
+    switch: s_sling_left

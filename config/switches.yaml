@@ -1,111 +1,124 @@
 #config_version=6
 
-     
-
-#Can name these to match left, right, center, or however you want. The switch name defined here
-#Will be used in any modes where the switches are activated, etc.
-
-#3208 Board - Switches
 switches:
-  
-  # s_name:
-  #   number: <IO1,IO2>-<integer>
-  
-# Plunger
-
-  s_plunger:
-    number: IO1-27
-
-#Trough
-
-  s_trough_ball_jam:
-    number: IO1-6
-    type: 'NC'
-
-  s_trough_ball_1:
-    number: IO1-26
-    type: 'NC'
-
-  s_trough_ball_2:
-    number: IO1-28
-
-  s_trough_ball_3:
-    number: IO1-2
-
-  s_trough_ball_4:
-    number: IO1-3
-
-  s_trough_ball_5:
-    number: IO1-4
-
-  s_trough_ball_6:
-    number: IO1-5
-
-#Flippers
-  s_flipper_left:
-    number: IO1-30
-    tags: flipper_left
-    type: NC
-    debounce: normal
-  s_flipper_right:
-    number: IO1-31
-    tags: flipper_right
-    #type: NC
-    debounce: normal
-
-  s_flipper_left_upper_eos:
-    number: IO1-20
-    tags: flipper_left_upper_eos
-  s_flipper_left_lower_eos:
-    number: IO1-19
-    tags: flipper_left_lower_eos
-  s_flipper_right_eos:
-    number: IO1-18
-    tags: flipper_right_eos
-
-# Pop Bumpers
-  s_pop_bumper_cc_1:
-    number: IO2-18
-    tags: pop_bumper_cc_1, s_pops
-  s_pop_bumper_cc_2:
-    number: IO2-19
-    tags: pop_bumper_cc_2, s_pops
-  s_pop_bumper_cc_3:
-    number: IO2-22
-    tags: pop_bumper_cc_3, s_pops
-  s_pop_bumper_m:
-    number: IO2-20
-    tags: pop_bumper_m, s_pops
-    
-# Slingshot
-  s_slingshot_1:
-    number: IO1-17
-    tags: slingshot_switch
-  s_slingshot_2:
-    number: IO1-16
-    tags: slingshot_switch
-
-#Other Buttons
-
+  #=============================
+  # Cabinet IO Switches
+  # - 24 switch inputs, 8 driver outputs
+  # - 1 high power driver
+  # - 6 low current drivers for LEDs
+  # - 2 digital outputs (bill validator and card readers)
+  #=============================
+  # Cabinet Coin Door
+  #-----------------------------
+  #unused:
+    #number: cabinet-0
+    #number: cabinet-1
+    #number: cabinet-2
+    #number: cabinet-3
+    #number: cabinet-4
+    #number: cabinet-5
+    #number: cabinet-6
+    #number: cabinet-7
+  #-----------------------------
+  # Cabinet IO Left
+  #-----------------------------
   s_start:
-    number: IO1-29
-    tags: start
-    type: NC
-
-  #s_launch:
-  #  number: 3208-25
-  #  tags: start
+    number: cabinet-8
+  s_lower_left_flipper:
+    number: cabinet-9
+    debounce: normal
+  s_upper_left_flipper:
+    number: cabinet-10
+    debounce: normal
+  s_tilt:
+    number: cabinet-11
+    debounce: normal
+  #unused:
+    #number: cabinet-12
+    #number: cabinet-13
+    #number: cabinet-14
+    #number: cabinet-15
+  #-----------------------------
+  # Cabinet IO Right
+  #-----------------------------
+  #unused:
+    #number: cabinet-16
+    #number: cabinet-17
+    #number: cabinet-18
+    #number: cabinet-19
+    #number: cabinet-20
+    #number: cabinet-21
+    #number: cabinet-22
+    #number: cabinet-23
+  #-----------------------------
+  # Bill/Card/Ticket - UNUSED SHARES PINS W/ Cabinet IO Right
+  #-----------------------------
   
-#Lane Switches
-  s_left_outlane:
-    number:
-    tags: s_lanes
-  s_left_inlane:
-    number:
-    tags: s_lanes
-  s_right_inlane:
-    number:
-    tags: s_lanes
-  s_right_outlane:
-    number:
-    tags: s_lanes
+  
+  #=============================
+  # Playfield IO 3208 Switches
+  # - 32 switch inputs, 8 driver outputs
+  #=============================
+  # J8 - Switch Bank 0-7
+  #-----------------------------
+
+  s_trough_ball_1: #opto
+    number: playfield-0
+    type: 'NC'
+  s_trough_ball_2:
+    number: playfield-1
+  s_trough_ball_3:
+    number: playfield-2
+  s_trough_ball_4:
+    number: playfield-3
+  s_trough_ball_5:
+    number: playfield-4
+  s_trough_ball_6:
+    number: playfield-5
+  s_trough_ball_7:
+    number: playfield-6
+  s_trough_ball_8:
+    number: playfield-7
+  #-----------------------------
+  # J3 - Switch Bank 8-15
+  #-----------------------------
+  s_trough_ball_jam: #opto
+    number: playfield-8
+    type: 'NC'  
+  s_sling_left:
+    number: playfield-9
+  s_sling_right:
+    number: playfield-10
+  s_lower_left_flipper_eos:
+    number: playfield-11
+  s_lower_right_flipper_eos:
+    number: playfield-12
+  s_plunger:
+    number: playfield-13
+    #number: playfield-14
+    #number: playfield-15
+  #-----------------------------
+    # J6 - Switch Bank 16-23
+  #-----------------------------
+  #unused:
+    #number: playfield-16
+    #number: playfield-17
+    #number: playfield-18
+    #number: playfield-19
+    #number: playfield-20
+    #number: playfield-21
+    #number: playfield-22
+    #number: playfield-23
+  #-----------------------------
+  # J9 - Switch Bank 24-31
+  #-----------------------------
+  #unused:
+    #number: playfield-24
+    #number: playfield-25
+    #number: playfield-26
+    #number: playfield-27
+    #number: playfield-28
+    #number: playfield-29
+    #number: playfield-30
+    #number: playfield-31
+  

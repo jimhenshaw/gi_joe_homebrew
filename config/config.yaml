@@ -3,16 +3,15 @@
 hardware:
     platform: fast
 
-
 fast:
   net:
     controller: neuron
     port: auto
     io_loop:
-      cabinet_io:
+      cabinet:
         model: FP-I/O-0024
         order: 1
-      playfield_io:
+      playfield:
         model: FP-I/O-3208
         order: 2
 
@@ -41,7 +40,6 @@ fast:
 
 
 displays:
-
   window:
     width: 1920
     height: 1080
@@ -51,104 +49,85 @@ displays:
 
 
 
-#slides:
- # slide_layout:
- #   target: window
- #   background_color: white #white for test
- #   widgets:
- #     - type: display
- #       source_display: display1
- #       width: 1920
- #       height: 1080
- #       x: right
- #       anchor_x: right
 
 
-#slide_player:
-#  mc_ready:
-#    slide_layout:
-#      target: window
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
 
-#Game Config
+machine:
+    balls_installed: 8
 
+game:
+    balls_per_game: 1
+    max_players: 1
+    
+#=============================
+# Config Files
+#=============================
 config:
   - lights.yaml
   - coils.yaml
   - switches.yaml
   - variables.yaml
 
-
-playfields:
-  #Define your playfields
-
-  playfield:
-    default_source_device: bd_plunger
-    tags: default
-
-machine:
-    balls_installed: 6
-
-game:
-    balls_per_game: 1
-    max_players: 1
-
+#=============================
+# Modes
+#=============================
 modes:
-  - base
+  #- base
   - attract
-  - char_select
-  - mode_1
+  #- char_select
+  #- mode_1
 
-#Flippers
+#=============================
+# Flippers
+#=============================
 flippers:
-  left_flipper_lower:
-    main_coil: c_flipper_left_lower_full
-    hold_coil: c_flipper_left_lower_hold
-    activation_switch: s_flipper_left
-    eos_switch: s_flipper_left_lower_eos
-    enable_events: ball_started, enableAutofire, machine_reset_phase_3 # TODO, remove from game
-    disable_events: ball_will_end, service_mode_entered, disableAutofire
-  left_flipper_upper:
-    main_coil: c_flipper_left_upper_full
-    hold_coil: c_flipper_left_upper_hold
-    activation_switch: s_flipper_left
-    eos_switch: s_flipper_left_upper_eos
-    enable_events: ball_started, enableAutofire, machine_reset_phase_3 # TODO, remove from game
-    disable_events: ball_will_end, service_mode_entered, disableAutofire
-
-  right_flipper:
-    main_coil: c_flipper_right_full
-    hold_coil: c_flipper_right_hold
-    eos_switch: s_flipper_right_eos
-    activation_switch: s_flipper_right
-    enable_events: ball_started, enableAutofire, machine_reset_phase_3 # TODO, remove from game
-    disable_events: ball_will_end, service_mode_entered, disableAutofire
-
+  flipper_lower_left:
+    main_coil: c_lower_left_flipper_main
+    hold_coil: c_lower_left_flipper_hold
+    activation_switch: s_lower_left_flipper
+    eos_switch: s_lower_left_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
+  #right_flipper:
+    #main_coil: c_flipper_right_full
+    #hold_coil: c_flipper_right_hold
+    #eos_switch: s_flipper_right_eos
+    #activation_switch: s_flipper_right
+    #enable_events: ball_started, machine_reset_phase_3 # TODO, remove from game
+    #disable_events: ball_will_end, service_mode_entered, disableAutofire    
+    
+  #left_flipper_upper:
+    #main_coil: c_flipper_left_upper_full
+    #hold_coil: c_flipper_left_upper_hold
+    #activation_switch: s_flipper_left
+    #eos_switch: s_flipper_left_upper_eos
+    #enable_events: ball_started, enableAutofire, machine_reset_phase_3 # TODO, remove from game
+    #disable_events: ball_will_end, service_mode_entered, disableAutofire
       
+#=============================
+# Ball Devices
+#=============================      
 ball_devices:
 
   bd_trough:
-
-    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5, s_trough_ball_6
-    #mechanical_eject: true
+    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5, s_trough_ball_6, s_trough_ball_7, s_trough_ball_8
     tags: trough, home, drain
-    eject_coil: c_trough_eject_coil
+    eject_coil: c_trough_eject
     eject_coil_jam_pulse: 15ms
     eject_targets: bd_plunger
     eject_timeouts: 2s
-    max_eject_attempts: 1
+    max_eject_attempts: 3
 
   bd_plunger:
     ball_switches: s_plunger
+    eject_coil: c_auto_kicker
     mechanical_eject: true
     eject_timeouts: 5s
 
-#Example Drop Target Bank setup. This can be setup how you need it
-
-#drop_targets:
-#    lowerDrop1_target:
-#         switch: s_lowerDrop1
-#    lowerDrop2_target:
-#         switch: s_lowerDrop2
 virtual_platform_start_active_switches:
   - s_trough_ball_1
   - s_trough_ball_2
@@ -156,18 +135,12 @@ virtual_platform_start_active_switches:
   - s_trough_ball_4
   - s_trough_ball_5
   - s_trough_ball_6
+  - s_trough_ball_7
+  - s_trough_ball_8
 
-
-drop_target_banks:
-
-#    TEAM_bank:
-#        drop_targets: lowerDrop1_target, lowerDrop2_target
-#        reset_coil: c_reset_4bank
-#        reset_coil_max_wait_ms: 150
-#        reset_events:
-#           machine_reset_phase_3: 100ms
-#           ball_starting: 100ms
-
+#=============================
+# Shakers
+#=============================  
 shakers:
   main_shaker:
     number: shakerboard-1
@@ -175,5 +148,5 @@ shakers:
     default_power: 0.5
     control_events:
       shake_shake_shake:
-        power: 0.05
-        duration: 1s      
+        power: 0.5
+        duration: 3s      

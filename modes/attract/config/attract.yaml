@@ -7,16 +7,13 @@ slide_player:
 
   mode_attract_stopping:
     joe_ros_intro:
-        action: remove
+      action: remove
 
 show_player:
     mode_attract_started:
-      attract_circle:
+      blinking_start:
         loops: -1
-        speed: 50
-      attract_pops:
-        loops: -1
-        speed: 50
         
 event_player:
-  mode_attract_started: shake_shake_shake
+  s_start_active: shake_shake_shake
+  

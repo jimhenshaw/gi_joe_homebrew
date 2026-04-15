@@ -1,0 +1,8 @@
+#show_version=6
+
+  - duration: 200ms
+    lights:
+      l_start: on
+  - duration: 200ms
+    lights:
+      l_start: off
