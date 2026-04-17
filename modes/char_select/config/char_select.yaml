@@ -4,6 +4,7 @@ mode:
     start_events: start_char_select
     priority: 100
     code: mpf.modes.carousel.code.carousel.Carousel
+    stop_events: stop_char_select
     
 mode_settings:
   selectable_items:
@@ -14,8 +15,8 @@ mode_settings:
     - destro
     - baroness
   select_item_events: s_start_active
-  next_item_events: s_flipper_right_active
-  previous_item_events: s_flipper_left_active
+  next_item_events: s_lower_right_flipper_active
+  previous_item_events: s_lower_left_flipper_active
     
 slide_player:
     play_carousel:
@@ -27,7 +28,7 @@ sound_player:
     char_select_music:
       bus: music
       priority: 50
-      loops: -1
+      loops: -1  
       
   play_new_selection:
     new_selection:
@@ -36,11 +37,12 @@ sound_player:
       
 event_player:
   mode_char_select_started: play_carousel, play_char_select_music
-  s_flipper_right_active: play_new_selection
-  s_flipper_left_active: play_new_selection
+  s_lower_right_flipper_active: play_new_selection
+  s_lower_left_flipper_active: play_new_selection
+  carousel_item_selected: set_char, stop_char_select
   
 variable_player:
-  carousel_item_selected: 
+  set_char: 
     selected_char:
       action: set
       string: (item)

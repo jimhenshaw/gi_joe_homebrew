@@ -15,5 +15,5 @@ show_player:
         loops: -1
         
 event_player:
-  s_start_active: shake_shake_shake
+  s_start_active: game_start
   

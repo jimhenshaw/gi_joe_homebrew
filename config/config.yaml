@@ -57,10 +57,10 @@ playfields:
     tags: default
 
 machine:
-    balls_installed: 8
+    balls_installed: 7
 
 game:
-    balls_per_game: 1
+    balls_per_game: 3
     max_players: 1
     
 #=============================
@@ -76,11 +76,10 @@ config:
 # Modes
 #=============================
 modes:
-  #- base
+  - base
   - attract
-  #- char_select
-  #- mode_1
-
+  - char_select
+  
 #=============================
 # Flippers
 #=============================

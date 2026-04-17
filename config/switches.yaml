@@ -41,9 +41,13 @@ switches:
   #-----------------------------
   # Cabinet IO Right
   #-----------------------------
-  #unused:
-    #number: cabinet-16
-    #number: cabinet-17
+  s_lower_right_flipper:
+    number: cabinet-16
+    debounce: normal
+  s_upper_right_flipper:
+    number: cabinet-17
+    debounce: normal
+  #unused:    
     #number: cabinet-18
     #number: cabinet-19
     #number: cabinet-20
