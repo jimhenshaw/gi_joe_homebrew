@@ -57,7 +57,7 @@ playfields:
     tags: default
 
 machine:
-    balls_installed: 7
+    balls_installed: 1
 
 game:
     balls_per_game: 3
@@ -71,6 +71,7 @@ config:
   - coils.yaml
   - switches.yaml
   - variables.yaml
+  - blower.yaml
 
 #=============================
 # Modes
@@ -91,13 +92,13 @@ flippers:
     eos_switch: s_lower_left_flipper_eos
     enable_events: ball_started
     disable_events: ball_will_end, service_mode_entered
-  #right_flipper:
-    #main_coil: c_flipper_right_full
-    #hold_coil: c_flipper_right_hold
-    #eos_switch: s_flipper_right_eos
-    #activation_switch: s_flipper_right
-    #enable_events: ball_started, machine_reset_phase_3 # TODO, remove from game
-    #disable_events: ball_will_end, service_mode_entered, disableAutofire    
+  flipper_lower_right:
+    main_coil: c_lower_right_flipper_main
+    hold_coil: c_lower_right_flipper_hold
+    activation_switch: s_lower_right_flipper
+    eos_switch: s_lower_right_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered   
     
   #left_flipper_upper:
     #main_coil: c_flipper_left_upper_full

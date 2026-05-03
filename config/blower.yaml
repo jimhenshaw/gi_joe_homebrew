@@ -1,0 +1,29 @@
+#config_version=6
+
+#machine config coil player for the blower fan
+
+coil_player:
+  blower_low:
+    c_blower_fan:
+      action: enable
+      hold_power: 0.3      # 30% duty cycle
+  blower_med:
+    c_blower_fan:
+      action: enable
+      hold_power: 0.6      # 60% duty cycle
+  blower_high:
+    c_blower_fan:
+      action: enable
+      hold_power: 1.0      # 100% duty cycle
+  blower_off:
+    c_blower_fan:
+      action: disable
+
+#Test diverter to view the blower coil in MPF Monitor       
+#diverters:
+  #d_blower:
+    #enable_events: mode_attract_started
+    #activate_events: blower_low
+    #deactivate_events: blower_off
+    #activation_coil: c_blower_fan
+    #type: hold

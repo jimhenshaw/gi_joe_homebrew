@@ -10,13 +10,25 @@ switches:
   #=============================
   # Cabinet Coin Door
   #-----------------------------
+  s_coin_1:
+    number: cabinet-0
+    tags: coin, s_left_coin
+  s_coin_2:
+    number: cabinet-1
+    tags: coin, s_right_coin
+  s_service_esc:
+    number: cabinet-2
+    tags: exit
+  s_service_down:
+    number: cabinet-3
+    tags: down
+  s_service_up:
+    number: cabinet-4
+    tags: up
+  s_service_enter:
+    number: cabinet-5
+    tags: enter
   #unused:
-    #number: cabinet-0
-    #number: cabinet-1
-    #number: cabinet-2
-    #number: cabinet-3
-    #number: cabinet-4
-    #number: cabinet-5
     #number: cabinet-6
     #number: cabinet-7
   #-----------------------------

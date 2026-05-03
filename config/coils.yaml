@@ -27,6 +27,13 @@ coils:
     console_log: none
     file_log: none
   #---------------------
+  # Cabinet IO Knocker - J2
+  #---------------------  
+  c_blower_fan:
+    number: cabinet-7 # D1 - note in FAST docs says to use 7
+    allow_enable: true
+    default_hold_power: 0.3  # Default to Low speed (30% power)
+  #---------------------
   # Cabinet IO Right - J9
   #---------------------
   #unused:
@@ -69,7 +76,7 @@ autofire_coils:
   #=====================
   afc_right_sling:
     coil: c_right_sling
-    switch: s_sling_left
+    switch: s_sling_right
     
   afc_left_sling:
     coil: c_left_sling
