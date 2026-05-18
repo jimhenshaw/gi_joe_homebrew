@@ -17,6 +17,9 @@ fast:
       playfield:
         model: FP-I/O-3208
         order: 2
+      upper_playfield:
+        model: FP-I/O-1616
+        order: 3
 
   exp:
     debug: true
@@ -101,15 +104,22 @@ flippers:
     activation_switch: s_lower_right_flipper
     eos_switch: s_lower_right_flipper_eos
     enable_events: ball_started
-    disable_events: ball_will_end, service_mode_entered   
+    disable_events: ball_will_end, service_mode_entered
     
-  #left_flipper_upper:
-    #main_coil: c_flipper_left_upper_full
-    #hold_coil: c_flipper_left_upper_hold
-    #activation_switch: s_flipper_left
-    #eos_switch: s_flipper_left_upper_eos
-    #enable_events: ball_started, enableAutofire, machine_reset_phase_3 # TODO, remove from game
-    #disable_events: ball_will_end, service_mode_entered, disableAutofire
+  flipper_upper_left:
+    main_coil: c_upper_left_flipper_main
+    hold_coil: c_upper_left_flipper_hold
+    activation_switch: s_upper_left_flipper
+    #eos_switch: s_upper_left_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
+  flipper_upper_right:
+    main_coil: c_upper_right_flipper_main
+    hold_coil: c_upper_right_flipper_hold
+    activation_switch: s_upper_right_flipper
+    #eos_switch: s_upper_right_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
       
 #=============================
 # Ball Devices

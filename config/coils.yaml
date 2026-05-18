@@ -69,7 +69,43 @@ coils:
   c_lower_right_flipper_hold:
     number: playfield-7
     default_hold_power: .5
-
+    
+  #=====================
+  # Playfield IO 1616 Coils
+  #=====================
+  # J3 - Drivers 0-7
+  #---------------------
+  c_upper_left_flipper_main:
+    number: upper_playfield-0
+    default_pulse_ms: 25
+  c_upper_left_flipper_hold:
+    number: upper_playfield-1
+    default_hold_power: .5
+  c_upper_right_flipper_main:
+    number: upper_playfield-2
+    default_pulse_ms: 25
+  c_upper_right_flipper_hold:
+    number: upper_playfield-3
+    default_hold_power: .5
+  #unused:
+    #number: upper_playfield-4
+    #number: upper_playfield-5
+    #number: upper_playfield-6
+    #number: upper_playfield-7
+  #---------------------
+  # J4 - Drivers 8-15
+  #---------------------
+  #unused:
+    #number: upper_playfield-8
+    #number: upper_playfield-9
+    #number: upper_playfield-10
+    #number: upper_playfield-11
+    #number: upper_playfield-12
+    #number: upper_playfield-13
+    #number: upper_playfield-14
+    #number: upper_playfield-15
+    
+    
 autofire_coils:
   #=====================  
   # Slingshots

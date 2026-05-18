@@ -141,4 +141,31 @@ switches:
     #number: playfield-29
     #number: playfield-30
     #number: playfield-31
-  
+    
+  #=============================
+  # Playfield IO 1616 Switches
+  # - 16 switch inputs, 16 driver outputs
+  #=============================
+  # J7 - Switch Bank 0-7
+  #-----------------------------
+  #unused:    
+    #number: upper_playfield-0
+    #number: upper_playfield-1
+    #number: upper_playfield-2
+    #number: upper_playfield-3
+    #number: upper_playfield-4
+    #number: upper_playfield-5
+    #number: upper_playfield-6
+    #number: upper_playfield-7    
+  #-----------------------------
+  # J8 - Switch Bank 8-15
+  #-----------------------------
+  #unused:    
+    #number: upper_playfield-8
+    #number: upper_playfield-9
+    #number: upper_playfield-10
+    #number: upper_playfield-11
+    #number: upper_playfield-12
+    #number: upper_playfield-13
+    #number: upper_playfield-14
+    #number: upper_playfield-15  
