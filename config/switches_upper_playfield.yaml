@@ -1,0 +1,41 @@
+#config_version=6
+
+switches:    
+  #=============================
+  # Playfield IO 1616 Switches
+  # - 16 switch inputs, 16 driver outputs
+  #=============================
+  # J7 - Switch Bank 0-7
+  #-----------------------------
+  s_left_ninja:
+    number: upper_playfield-0
+  s_right_ninja:
+    number: upper_playfield-1
+  s_storm_shadow_eos:
+    number: upper_playfield-2
+  s_storm_shadow:
+    number: upper_playfield-3
+  s_snake_eyes_eos:
+    number: upper_playfield-4
+  s_snake_eyes:
+    number: upper_playfield-5
+  s_heavy_water:
+    number: upper_playfield-6
+  s_left_ramp:
+    number: upper_playfield-7
+  #-----------------------------
+  # J8 - Switch Bank 8-15
+  #-----------------------------
+  s_left_orbit:
+    number: upper_playfield-8
+  s_right_orbit:
+    number: upper_playfield-9
+  s_red_crystals:
+    number: upper_playfield-10
+  s_meteor_dust:
+    number: upper_playfield-11
+  #unused:    
+    #number: upper_playfield-12
+    #number: upper_playfield-13
+    #number: upper_playfield-14
+    #number: upper_playfield-15  

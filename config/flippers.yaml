@@ -1,0 +1,35 @@
+#config_version=6
+
+#=============================
+# Flippers
+#=============================
+flippers:
+  flipper_lower_left:
+    main_coil: c_lower_left_flipper_main
+    hold_coil: c_lower_left_flipper_hold
+    activation_switch: s_lower_left_flipper
+    eos_switch: s_lower_left_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
+  flipper_lower_right:
+    main_coil: c_lower_right_flipper_main
+    hold_coil: c_lower_right_flipper_hold
+    activation_switch: s_lower_right_flipper
+    eos_switch: s_lower_right_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
+    
+  flipper_upper_left:
+    main_coil: c_upper_left_flipper_main
+    hold_coil: c_upper_left_flipper_hold
+    activation_switch: s_upper_left_flipper
+    #eos_switch: s_upper_left_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered
+  flipper_upper_right:
+    main_coil: c_upper_right_flipper_main
+    hold_coil: c_upper_right_flipper_hold
+    activation_switch: s_upper_right_flipper
+    #eos_switch: s_upper_right_flipper_eos
+    enable_events: ball_started
+    disable_events: ball_will_end, service_mode_entered

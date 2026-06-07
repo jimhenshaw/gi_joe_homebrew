@@ -1,0 +1,42 @@
+#config_version=6
+
+#=============================
+# Ball Devices
+#=============================      
+ball_devices:
+
+  bd_trough:
+    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5, s_trough_ball_6, s_trough_ball_7, s_trough_ball_8
+    tags: trough, home, drain
+    eject_coil: c_trough_eject
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 2s
+    max_eject_attempts: 3
+
+  bd_plunger:
+    ball_switches: s_plunger
+    eject_coil: c_auto_kicker
+    mechanical_eject: true
+    eject_timeouts: 5s
+    
+  bd_left_mass:
+    ball_switches: s_left_mass_vuk_1, s_left_mass_vuk_2, s_left_mass_vuk_3
+    #confirm_eject_type: switch #not needed
+    #confirm_eject_switch: s_left_mass_eject_switch #not needed
+    eject_coil: c_left_mass_vuk
+    eject_events: eject_left_mass
+    eject_timeouts: 2s
+    entrance_events: s_left_mass_entrance_active
+
+    #jam_switch s_left_mass_jam_switch #hopefully not needed
+
+  bd_right_mass:
+    ball_switches: s_right_mass_vuk_1, s_right_mass_vuk_2, s_right_mass_vuk_3
+    #confirm_eject_type: switch #not needed
+    #confirm_eject_switch: s_right_mass_eject_switch #not needed
+    eject_coil: c_right_mass_vuk
+    eject_events: eject_right_mass
+    eject_timeouts: 2s
+    entrance_events: s_right_mass_entrance_active
+    #jam_switch s_right_mass_jam_switch #hopefully not needed

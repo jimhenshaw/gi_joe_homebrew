@@ -1,0 +1,9 @@
+#config_version=6
+
+sequence_shots:
+  left_orbit:
+    event_sequence: left_spinner_active, right_spinner_active
+    sequence_timeout: 2s
+  right_orbit:
+    event_sequence: right_spinner_active, left_spinner_active
+    sequence_timeout: 2s

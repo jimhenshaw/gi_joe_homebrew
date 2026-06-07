@@ -1,0 +1,10 @@
+#config_version=6
+
+#=============================
+# Modes
+#=============================
+modes:
+  - base
+  - attract
+  - char_select
+  - mass

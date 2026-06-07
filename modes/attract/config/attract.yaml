@@ -1,7 +1,6 @@
 #config_version=6
 #attract mode config file
 
-
 slide_player:
   mode_attract_started: joe_ros_intro
 
@@ -14,7 +13,11 @@ show_player:
       blinking_start:
         loops: -1
         
+coil_player:
+  s_lower_left_flipper_active: 
+    dwc_storm_shadow:
+      action: enable
+          
 event_player:
-  s_start_active: game_start
   s_lower_left_flipper_active: blower_low
   s_lower_right_flipper_active: blower_off

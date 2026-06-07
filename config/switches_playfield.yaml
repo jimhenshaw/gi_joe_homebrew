@@ -1,0 +1,91 @@
+#config_version=6
+
+switches:  
+  #=============================
+  # Playfield IO 3208 Switches
+  # - 32 switch inputs, 8 driver outputs
+  #=============================
+  # J8 - Switch Bank 0-7
+  #-----------------------------
+
+  s_trough_ball_1: #opto
+    number: playfield-0
+    type: 'NC'
+  s_trough_ball_2:
+    number: playfield-1
+  s_trough_ball_3:
+    number: playfield-2
+  s_trough_ball_4:
+    number: playfield-3
+  s_trough_ball_5:
+    number: playfield-4
+  s_trough_ball_6:
+    number: playfield-5
+  s_trough_ball_7:
+    number: playfield-6
+  s_trough_ball_8:
+    number: playfield-7
+  #-----------------------------
+  # J3 - Switch Bank 8-15
+  #-----------------------------
+  s_trough_ball_jam: #opto
+    number: playfield-8
+    type: 'NC'
+  s_sling_left:
+    number: playfield-9
+  s_sling_right:
+    number: playfield-10
+  s_lower_left_flipper_eos:
+    number: playfield-11
+  s_lower_right_flipper_eos:
+    number: playfield-12
+  s_plunger:
+    number: playfield-13
+  s_left_inlane:
+    number: playfield-14
+  s_left_outlane:
+    number: playfield-15
+  #-----------------------------
+    # J6 - Switch Bank 16-23
+  #-----------------------------
+  #unused:
+    #number: playfield-16
+    #number: playfield-17
+    #number: playfield-18
+    #number: playfield-19
+    #number: playfield-20
+    #number: playfield-21
+    #number: playfield-22
+    #number: playfield-23
+  #-----------------------------
+  # J9 - Switch Bank 24-31
+  #-----------------------------
+  s_right_inlane:
+    number: playfield-24
+  s_right_outlane:    
+    number: playfield-25
+  #unused:    
+    #number: playfield-26
+    #number: playfield-27
+    #number: playfield-28
+    #number: playfield-29
+    #number: playfield-30
+    #number: playfield-31
+    
+  s_left_mass_vuk_1:
+    number: 1
+  s_left_mass_vuk_2:
+    number: 2
+  s_left_mass_vuk_3:
+    number: 3
+  s_left_mass_entrance:
+    number: 4
+    
+  s_right_mass_vuk_1:
+    number: 5
+  s_right_mass_vuk_2:
+    number: 6
+  s_right_mass_vuk_3:
+    number: 7
+  s_right_mass_entrance:
+    number: 8

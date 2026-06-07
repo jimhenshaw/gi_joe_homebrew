@@ -87,23 +87,44 @@ coils:
   c_upper_right_flipper_hold:
     number: upper_playfield-3
     default_hold_power: .5
-  #unused:
-    #number: upper_playfield-4
-    #number: upper_playfield-5
-    #number: upper_playfield-6
-    #number: upper_playfield-7
+  c_storm_shadow_main:
+    number: upper_playfield-4
+    default_pulse_ms: 25
+  c_storm_shadow_hold:
+    number: upper_playfield-5
+    default_hold_power: .5
+  c_snake_eyes_main:
+    number: upper_playfield-6
+    default_pulse_ms: 25
+  c_snake_eyes_hold:
+    number: upper_playfield-7
+    default_hold_power: .5
   #---------------------
   # J4 - Drivers 8-15
   #---------------------
+  c_left_mass_vuk:
+    number: upper_playfield-8
+    default_pulse_ms: 25
+  c_right_mass_vuk:
+    number: upper_playfield-9
+    default_pulse_ms: 25
   #unused:
-    #number: upper_playfield-8
-    #number: upper_playfield-9
     #number: upper_playfield-10
     #number: upper_playfield-11
     #number: upper_playfield-12
     #number: upper_playfield-13
     #number: upper_playfield-14
     #number: upper_playfield-15
+    
+dual_wound_coils:
+  dwc_storm_shadow:
+    hold_coil: c_storm_shadow_hold
+    main_coil: c_storm_shadow_main
+    eos_switch: s_storm_shadow_eos
+  dwc_snake_eyes:
+    hold_coil: c_snake_eyes_hold
+    main_coil: c_snake_eyes_main
+    eos_switch: s_snake_eyes_eos
     
     
 autofire_coils:

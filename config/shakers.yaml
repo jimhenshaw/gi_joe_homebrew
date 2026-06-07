@@ -1,0 +1,14 @@
+#config_version=6
+
+#=============================
+# Shakers
+#=============================  
+shakers:
+  main_shaker:
+    number: shakerboard-1
+    debug: true
+    default_power: 0.5
+    control_events:
+      shake_shake_shake:
+        power: 0.5
+        duration: 3s

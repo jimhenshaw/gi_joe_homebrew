@@ -1,0 +1,74 @@
+#config_version=6
+
+switches:
+  #=============================
+  # Cabinet IO Switches
+  # - 24 switch inputs, 8 driver outputs
+  # - 1 high power driver
+  # - 6 low current drivers for LEDs
+  # - 2 digital outputs (bill validator and card readers)
+  #=============================
+  # Cabinet Coin Door
+  #-----------------------------
+  s_coin_1:
+    number: cabinet-0
+    tags: coin, s_left_coin
+  s_coin_2:
+    number: cabinet-1
+    tags: coin, s_right_coin
+  s_service_esc:
+    number: cabinet-2
+    tags: exit
+  s_service_down:
+    number: cabinet-3
+    tags: down
+  s_service_up:
+    number: cabinet-4
+    tags: up
+  s_service_enter:
+    number: cabinet-5
+    tags: enter
+  #unused:
+    #number: cabinet-6
+    #number: cabinet-7
+  #-----------------------------
+  # Cabinet IO Left
+  #-----------------------------
+  s_start:
+    number: cabinet-8
+    tags: start
+  s_lower_left_flipper:
+    number: cabinet-9
+    tags: left_flipper
+    debounce: normal
+  s_upper_left_flipper:
+    number: cabinet-10
+    debounce: normal
+  s_tilt:
+    number: cabinet-11
+    debounce: normal
+  #unused:
+    #number: cabinet-12
+    #number: cabinet-13
+    #number: cabinet-14
+    #number: cabinet-15
+  #-----------------------------
+  # Cabinet IO Right
+  #-----------------------------
+  s_lower_right_flipper:
+    number: cabinet-16
+    tags: right_flipper
+    debounce: normal
+  s_upper_right_flipper:
+    number: cabinet-17
+    debounce: normal
+  #unused:    
+    #number: cabinet-18
+    #number: cabinet-19
+    #number: cabinet-20
+    #number: cabinet-21
+    #number: cabinet-22
+    #number: cabinet-23
+  #-----------------------------
+  # Bill/Card/Ticket - UNUSED SHARES PINS W/ Cabinet IO Right
+  #-----------------------------

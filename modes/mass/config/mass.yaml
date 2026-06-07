@@ -1,0 +1,175 @@
+#config_version=6
+# M.A.S.S. Mode Rules
+#----------------------------------------------------------------------
+# M.A.S.S. VUKs start empty
+#   M.A.S.S. VUKs will default to auto-ejecting if M.A.S.S. is not enabled
+# Retrieve the three catalytic elements to enable M.A.S.S.
+#   Hit three element targets
+#   M.A.S.S. stays enabled between balls
+# When enabled, hit the M.A.S.S. VUK to store up three balls
+# Once two balls are in each M.A.S.S. VUK, enable teleportation
+#   Ball will be stored in one and shot out of the other
+#   If 3-balls are in one VUK and another is added, eject ball from that VUK
+# Teleport three times to start M.A.S.S. Multiball
+#----------------------------------------------------------------------
+
+mode:
+    start_events: ball_started
+    priority: 200
+    code: multiball.MultilockManipulator
+    
+counters:
+  mass_ball_teleport_counter:
+    enable_events: enable_mass_ball_teleport_counter
+    count_events: increment_teleport_counter
+    count_complete_value: 3
+    events_when_complete: start_mass_multiball
+    
+multiballs:
+  mass_multiball:
+    ball_count: 6
+    ball_count_type: total
+    ball_locks: bd_left_mass, bd_right_mass
+    shoot_again: 10s
+    start_events: start_mass_multiball
+  mini_left_mass_multiball:
+    ball_count: 1
+    ball_count_type: add
+    ball_locks: bd_left_mass
+    shoot_again: 0s
+    start_events: start_left_mini_mass_multiball
+  mini_right_mass_multiball:
+    ball_count: 1
+    ball_count_type: add
+    ball_locks: bd_right_mass
+    shoot_again: 0s
+    start_events: start_right_mini_mass_multiball
+    
+multiball_locks:
+  left_mass_ball_lock:
+    balls_to_lock: 3
+    lock_devices: bd_left_mass
+    enable_events: enable_left_mass_ball_lock, enable_mass_ball_locks
+    disable_events: disable_left_mass_ball_lock, disable_mass_ball_locks
+    locked_ball_counting_strategy: physical_only
+  right_mass_ball_lock:
+    balls_to_lock: 3
+    lock_devices: bd_right_mass
+    enable_events: enable_right_mass_ball_lock, enable_mass_ball_locks
+    disable_events: disable_right_mass_ball_lock, disable_mass_ball_locks
+    locked_ball_counting_strategy: physical_only
+
+shot_profiles:
+  off_lit:
+    states:
+      - name: off
+        show: "off"
+      - name: lit
+        show: light_color_lit_show
+
+shots:
+  red_crystal_shot:
+    switch: s_red_crystals
+    profile: off_lit
+    show_tokens:
+      light: l_red_crystals
+      color: red
+  heavy_water_shot:
+    switch: s_heavy_water
+    profile: off_lit
+    show_tokens:
+      light: l_heavy_water
+      color: blue
+  meteor_dust_shot:
+    switch: s_meteor_dust
+    profile: off_lit
+    show_tokens:
+      light: l_meteor_dust
+      color: yellow
+      
+light_player:
+  turn_off_left_mass_lights:
+    l_left_mass_red_crystals:
+      color: off
+    l_left_mass_heavy_water:
+      color: off
+    l_left_mass_meteor_dust:
+      color: off
+  turn_off_right_mass_lights:
+    l_right_mass_red_crystals:
+      color: off
+    l_right_mass_heavy_water:
+      color: off
+    l_right_mass_meteor_dust:
+      color: off
+  show_left_mass_light1:
+    l_left_mass_red_crystals:
+      color: red
+  show_left_mass_light2:
+    l_left_mass_heavy_water:
+      color: blue
+  show_left_mass_light3:
+    l_left_mass_meteor_dust:
+      color: yellow
+  show_right_mass_light1:
+    l_right_mass_red_crystals:
+      color: red
+  show_right_mass_light2:
+    l_right_mass_heavy_water:
+      color: blue
+  show_right_mass_light3:
+    l_right_mass_meteor_dust:
+      color: yellow
+      
+shot_groups:
+  mass_elements_shot_group:
+      shots: red_crystal_shot, heavy_water_shot, meteor_dust_shot
+      disable_events: mass_elements_shot_group_lit_complete
+      
+event_player:
+  mass_elements_shot_group_lit_complete: enable_mass_ball_locks
+  enable_mass_teleportation: set_mass_teleportation, enable_mass_ball_teleport_counter, set_balls_to_replace_to_zero
+  mass_ball_lock_full: disable_mass_ball_lock
+  multiball_lock_left_mass_ball_lock_locked_ball: check_ball_locks
+  multiball_lock_right_mass_ball_lock_locked_ball: check_ball_locks
+  check_ball_locks{device.ball_devices.bd_left_mass.available_balls >= 2 and device.ball_devices.bd_right_mass.available_balls >= 2}: enable_mass_teleportation
+  balldevice_bd_left_mass_ball_entered{device.multiball_locks.left_mass_ball_lock.enabled == True}: update_left_mass_lights
+  balldevice_bd_right_mass_ball_entered{device.multiball_locks.right_mass_ball_lock.enabled == True}: update_right_mass_lights
+  balldevice_bd_left_mass_ball_entered{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_right_mass.available_balls > 0}: eject_right_mass, update_right_mass_lights, increment_teleport_counter
+  balldevice_bd_right_mass_ball_entered{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_left_mass.available_balls > 0}: eject_left_mass, update_left_mass_lights, increment_teleport_counter
+  #check for full VUKs and ball went through the entrance switch
+  s_left_mass_entrance_active{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_left_mass.available_balls == 3 and device.ball_devices.bd_right_mass.available_balls > 0}: eject_right_mass, update_right_mass_lights, start_left_mini_mass_multiball, increment_teleport_counter
+  s_right_mass_entrance_active{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_right_mass.available_balls == 3 and device.ball_devices.bd_left_mass.available_balls > 0}: eject_left_mass, update_right_mass_lights, start_right_mini_mass_multiball, increment_teleport_counter
+  
+  #Update lights on ball ejection
+  balldevice_bd_left_mass_ball_eject_success: update_left_mass_lights
+  balldevice_bd_right_mass_ball_eject_success: update_right_mass_lights
+  
+  #Handle Mass Lights after teleportation enabled
+  update_left_mass_lights: turn_off_left_mass_lights, turn_on_left_mass_lights
+  update_right_mass_lights: turn_off_right_mass_lights, turn_on_right_mass_lights
+  turn_on_left_mass_lights{device.ball_devices.bd_left_mass.available_balls == 3}: show_left_mass_light3
+  turn_on_left_mass_lights{device.ball_devices.bd_left_mass.available_balls >= 2}: show_left_mass_light2
+  turn_on_left_mass_lights{device.ball_devices.bd_left_mass.available_balls >= 1}: show_left_mass_light1
+  turn_on_right_mass_lights{device.ball_devices.bd_right_mass.available_balls == 3}: show_right_mass_light3
+  turn_on_right_mass_lights{device.ball_devices.bd_right_mass.available_balls >= 2}: show_right_mass_light2
+  turn_on_right_mass_lights{device.ball_devices.bd_right_mass.available_balls >= 1}: show_right_mass_light1
+  
+  set_balls_to_replace_to_zero:
+    set_multiball_lock_balls_to_replace:
+      value:
+        value: 0
+        type: int
+        
+  set_balls_to_replace_to_all:
+    set_multiball_lock_balls_to_replace:
+      value:
+        value: -1
+        type: int
+    
+variable_player:
+  set_mass_teleportation:
+    mass_teleportation_enabled:
+      action: set
+      int: 1
+      

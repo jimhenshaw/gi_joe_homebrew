@@ -53,10 +53,6 @@ displays:
     width: 1920
     height: 1080
 
-
-
-
-
 playfields:
   playfield:
     default_source_device: bd_plunger
@@ -73,73 +69,20 @@ game:
 # Config Files
 #=============================
 config:
-  - lights.yaml
-  - coils.yaml
-  - switches.yaml
-  - variables.yaml
+  - ball_devices.yaml
   - blower.yaml
-
-#=============================
-# Modes
-#=============================
-modes:
-  - base
-  - attract
-  - char_select
-  
-#=============================
-# Flippers
-#=============================
-flippers:
-  flipper_lower_left:
-    main_coil: c_lower_left_flipper_main
-    hold_coil: c_lower_left_flipper_hold
-    activation_switch: s_lower_left_flipper
-    eos_switch: s_lower_left_flipper_eos
-    enable_events: ball_started
-    disable_events: ball_will_end, service_mode_entered
-  flipper_lower_right:
-    main_coil: c_lower_right_flipper_main
-    hold_coil: c_lower_right_flipper_hold
-    activation_switch: s_lower_right_flipper
-    eos_switch: s_lower_right_flipper_eos
-    enable_events: ball_started
-    disable_events: ball_will_end, service_mode_entered
-    
-  flipper_upper_left:
-    main_coil: c_upper_left_flipper_main
-    hold_coil: c_upper_left_flipper_hold
-    activation_switch: s_upper_left_flipper
-    #eos_switch: s_upper_left_flipper_eos
-    enable_events: ball_started
-    disable_events: ball_will_end, service_mode_entered
-  flipper_upper_right:
-    main_coil: c_upper_right_flipper_main
-    hold_coil: c_upper_right_flipper_hold
-    activation_switch: s_upper_right_flipper
-    #eos_switch: s_upper_right_flipper_eos
-    enable_events: ball_started
-    disable_events: ball_will_end, service_mode_entered
-      
-#=============================
-# Ball Devices
-#=============================      
-ball_devices:
-
-  bd_trough:
-    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3, s_trough_ball_4, s_trough_ball_5, s_trough_ball_6, s_trough_ball_7, s_trough_ball_8
-    tags: trough, home, drain
-    eject_coil: c_trough_eject
-    eject_coil_jam_pulse: 15ms
-    eject_targets: bd_plunger
-    eject_timeouts: 2s
-    max_eject_attempts: 3
-
-  bd_plunger:
-    ball_switches: s_plunger
-    eject_coil: c_auto_kicker
-    mechanical_eject: true
-    eject_timeouts: 5s
+  - coils.yaml
+  - flippers.yaml
+  - lights.yaml
+  - modes.yaml
+  - player_variables.yaml
+  - sequence_shots.yaml
+  - shakers.yaml
+  - spinners.yaml
+  - switches_cabinet.yaml
+  - switches_upper_playfield.yaml
+  - switches_playfield.yaml
+  - variables.yaml
 
 virtual_platform_start_active_switches:
   - s_trough_ball_1
@@ -150,16 +93,3 @@ virtual_platform_start_active_switches:
   - s_trough_ball_6
   - s_trough_ball_7
   - s_trough_ball_8
-
-#=============================
-# Shakers
-#=============================  
-shakers:
-  main_shaker:
-    number: shakerboard-1
-    debug: true
-    default_power: 0.5
-    control_events:
-      shake_shake_shake:
-        power: 0.5
-        duration: 3s      

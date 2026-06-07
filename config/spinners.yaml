@@ -1,0 +1,9 @@
+#config_version=6
+
+spinners:
+  left_spinner:
+    switch: s_left_orbit
+    active_ms: 500
+  right_spinner:
+    switch: s_right_orbit
+    active_ms: 500
