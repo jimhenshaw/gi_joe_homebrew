@@ -79,9 +79,7 @@ config:
   - sequence_shots.yaml
   - shakers.yaml
   - spinners.yaml
-  - switches_cabinet.yaml
-  - switches_upper_playfield.yaml
-  - switches_playfield.yaml
+  - switches.yaml
   - variables.yaml
 
 virtual_platform_start_active_switches:

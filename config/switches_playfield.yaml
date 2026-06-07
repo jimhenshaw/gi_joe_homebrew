@@ -74,20 +74,20 @@ switches:
     #number: playfield-30
     #number: playfield-31
     
-  s_left_mass_vuk_1:
-    number: 1
-  s_left_mass_vuk_2:
-    number: 2
-  s_left_mass_vuk_3:
-    number: 3
-  s_left_mass_entrance:
-    number: 4
+  #s_left_mass_vuk_1:
+  #  number: 1
+  #s_left_mass_vuk_2:
+  #  number: 2
+  #s_left_mass_vuk_3:
+  #  number: 3
+  #s_left_mass_entrance:
+  #  number: 4
     
-  s_right_mass_vuk_1:
-    number: 5
-  s_right_mass_vuk_2:
-    number: 6
-  s_right_mass_vuk_3:
-    number: 7
-  s_right_mass_entrance:
-    number: 8
+  #s_right_mass_vuk_1:
+  #  number: 5
+  #s_right_mass_vuk_2:
+  #  number: 6
+  #s_right_mass_vuk_3:
+  #  number: 7
+  #s_right_mass_entrance:
+  #  number: 8

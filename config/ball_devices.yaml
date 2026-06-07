@@ -20,23 +20,23 @@ ball_devices:
     mechanical_eject: true
     eject_timeouts: 5s
     
-  bd_left_mass:
-    ball_switches: s_left_mass_vuk_1, s_left_mass_vuk_2, s_left_mass_vuk_3
+  #bd_left_mass:
+  #  ball_switches: s_left_mass_vuk_1, s_left_mass_vuk_2, s_left_mass_vuk_3
     #confirm_eject_type: switch #not needed
     #confirm_eject_switch: s_left_mass_eject_switch #not needed
-    eject_coil: c_left_mass_vuk
-    eject_events: eject_left_mass
-    eject_timeouts: 2s
-    entrance_events: s_left_mass_entrance_active
+  #  eject_coil: c_left_mass_vuk
+  #  eject_events: eject_left_mass
+  #  eject_timeouts: 2s
+  #  entrance_events: s_left_mass_entrance_active
 
     #jam_switch s_left_mass_jam_switch #hopefully not needed
 
-  bd_right_mass:
-    ball_switches: s_right_mass_vuk_1, s_right_mass_vuk_2, s_right_mass_vuk_3
+  #bd_right_mass:
+  #  ball_switches: s_right_mass_vuk_1, s_right_mass_vuk_2, s_right_mass_vuk_3
     #confirm_eject_type: switch #not needed
     #confirm_eject_switch: s_right_mass_eject_switch #not needed
-    eject_coil: c_right_mass_vuk
-    eject_events: eject_right_mass
-    eject_timeouts: 2s
-    entrance_events: s_right_mass_entrance_active
+  #  eject_coil: c_right_mass_vuk
+  #  eject_events: eject_right_mass
+  #  eject_timeouts: 2s
+  #  entrance_events: s_right_mass_entrance_active
     #jam_switch s_right_mass_jam_switch #hopefully not needed
