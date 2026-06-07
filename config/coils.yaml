@@ -89,16 +89,19 @@ coils:
     default_hold_power: .5
   c_storm_shadow_main:
     number: upper_playfield-4
-    default_pulse_ms: 25
+    default_pulse_ms: 30
   c_storm_shadow_hold:
     number: upper_playfield-5
-    default_hold_power: .5
+    allow_enable: true #allows for power over 70%
+    default_hold_power: .9
   c_snake_eyes_main:
     number: upper_playfield-6
-    default_pulse_ms: 25
+    default_pulse_ms: 30
   c_snake_eyes_hold:
     number: upper_playfield-7
-    default_hold_power: .5
+    allow_enable: true #allows for power over 70%
+    default_hold_power: .9
+    
   #---------------------
   # J4 - Drivers 8-15
   #---------------------
