@@ -11,10 +11,9 @@ switches:
     number: upper_playfield-0
   s_right_ninja:
     number: upper_playfield-1
-  s_storm_shadow_eos:
-    number: upper_playfield-2
-  s_storm_shadow:
-    number: upper_playfield-3
+  #unused:    
+    #number: upper_playfield-2
+    #number: upper_playfield-3
   s_snake_eyes_eos:
     number: upper_playfield-4
   s_snake_eyes:

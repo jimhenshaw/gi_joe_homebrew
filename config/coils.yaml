@@ -126,6 +126,15 @@ dual_wound_coils:
     main_coil: c_snake_eyes_main
     eos_switch: s_snake_eyes_eos
     
+diverters:
+  storm_shadow_diverter:
+    activation_coil: dwc_storm_shadow
+    type: hold
+    activation_time: 10s
+    activate_events: activate_storm_shadow
+    deactivate_events: deactivate_storm_shadow
+    enable_events: enable_storm_shadow
+    disable_events: disable_storm_shadow
     
 autofire_coils:
   #=====================  

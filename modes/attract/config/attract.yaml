@@ -12,12 +12,9 @@ show_player:
     mode_attract_started:
       blinking_start:
         loops: -1
-        
-coil_player:
-  s_lower_left_flipper_active: 
-    dwc_storm_shadow:
-      action: enable
-          
+                 
 event_player:
-  s_lower_left_flipper_active: blower_low
-  s_lower_right_flipper_active: blower_off
+  mode_attract_started: enable_storm_shadow
+  s_lower_left_flipper_active: activate_storm_shadow
+  s_lower_right_flipper_active: deactivate_storm_shadow
+  
