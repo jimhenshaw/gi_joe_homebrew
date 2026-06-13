@@ -89,11 +89,12 @@ coils:
     default_hold_power: .5
   c_storm_shadow_main:
     number: upper_playfield-4
-    default_pulse_ms: 30
+    default_pulse_ms: 35 #f13 used 45
+    default_pulse_power: 1
   c_storm_shadow_hold:
-    number: upper_playfield-5
-    allow_enable: true #allows for power over 70%
-    default_hold_power: .9
+    number: upper_playfield-5    
+    default_hold_power: 1
+    #allow_enable: true #allows for power over 70%
   c_snake_eyes_main:
     number: upper_playfield-6
     default_pulse_ms: 30

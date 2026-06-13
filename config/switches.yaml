@@ -137,10 +137,10 @@ switches:
     number: playfield-24
   s_right_outlane:    
     number: playfield-25
-  s_storm_shadow: #storm shadow ninja head switch
-    number: playfield-26
   s_storm_shadow_eos: #pop up mech eos switch
-    number: playfield-27
+    number: playfield-26
+  s_storm_shadow: #storm shadow ninja head switch
+    number: playfield-27  
   #unused:    
     #number: playfield-28
     #number: playfield-29

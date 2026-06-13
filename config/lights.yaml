@@ -22,6 +22,202 @@ lights:
     platform: drivers
     type: r
     
+  #=============================
+  # Neuron Lights
+  #=============================
+  # Neuron Lights - Port 1
+  #----------------------------- 
+# Showcasing 1 to 63 sequentially on Neuron controller board 1, channel 1
+  l_left_rail_1:
+    number: neuron-1-1
+    tags: l_left_rail
+  l_left_rail_2:
+    number: neuron-1-2
+    tags: l_left_rail
+  l_left_rail_3:
+    number: neuron-1-3
+    tags: l_left_rail
+  l_left_rail_4:
+    number: neuron-1-4
+    tags: l_left_rail
+  l_left_rail_5:
+    number: neuron-1-5
+    tags: l_left_rail
+  l_left_rail_6:
+    number: neuron-1-6
+    tags: l_left_rail
+  l_left_rail_7:
+    number: neuron-1-7
+    tags: l_left_rail
+  l_left_rail_8:
+    number: neuron-1-8
+    tags: l_left_rail
+  l_left_rail_9:
+    number: neuron-1-9
+    tags: l_left_rail
+  l_left_rail_10:
+    number: neuron-1-10
+    tags: l_left_rail
+  l_left_rail_11:
+    number: neuron-1-11
+    tags: l_left_rail
+  l_left_rail_12:
+    number: neuron-1-12
+    tags: l_left_rail
+  l_left_rail_13:
+    number: neuron-1-13
+    tags: l_left_rail
+  l_left_rail_14:
+    number: neuron-1-14
+    tags: l_left_rail
+  l_left_rail_15:
+    number: neuron-1-15
+    tags: l_left_rail
+  l_left_rail_16:
+    number: neuron-1-16
+    tags: l_left_rail
+  l_left_rail_17:
+    number: neuron-1-17
+    tags: l_left_rail
+  l_left_rail_18:
+    number: neuron-1-18
+    tags: l_left_rail
+  l_left_rail_19:
+    number: neuron-1-19
+    tags: l_left_rail
+  l_left_rail_20:
+    number: neuron-1-20
+    tags: l_left_rail
+  l_left_rail_21:
+    number: neuron-1-21
+    tags: l_left_rail
+  l_left_rail_22:
+    number: neuron-1-22
+    tags: l_left_rail
+  l_left_rail_23:
+    number: neuron-1-23
+    tags: l_left_rail
+  l_left_rail_24:
+    number: neuron-1-24
+    tags: l_left_rail
+  l_left_rail_25:
+    number: neuron-1-25
+    tags: l_left_rail
+  l_left_rail_26:
+    number: neuron-1-26
+    tags: l_left_rail
+  l_left_rail_27:
+    number: neuron-1-27
+    tags: l_left_rail
+  l_left_rail_28:
+    number: neuron-1-28
+    tags: l_left_rail
+  l_left_rail_29:
+    number: neuron-1-29
+    tags: l_left_rail
+  l_left_rail_30:
+    number: neuron-1-30
+    tags: l_left_rail
+  l_left_rail_31:
+    number: neuron-1-31
+    tags: l_left_rail
+  l_left_rail_32:
+    number: neuron-1-32
+    tags: l_left_rail
+  l_left_rail_33:
+    number: neuron-1-33
+    tags: l_left_rail
+  l_left_rail_34:
+    number: neuron-1-34
+    tags: l_left_rail
+  l_left_rail_35:
+    number: neuron-1-35
+    tags: l_left_rail
+  l_left_rail_36:
+    number: neuron-1-36
+    tags: l_left_rail
+  l_left_rail_37:
+    number: neuron-1-37
+    tags: l_left_rail
+  l_left_rail_38:
+    number: neuron-1-38
+    tags: l_left_rail
+  l_left_rail_39:
+    number: neuron-1-39
+    tags: l_left_rail
+  l_left_rail_40:
+    number: neuron-1-40
+    tags: l_left_rail
+  l_left_rail_41:
+    number: neuron-1-41
+    tags: l_left_rail
+  l_left_rail_42:
+    number: neuron-1-42
+    tags: l_left_rail
+  l_left_rail_43:
+    number: neuron-1-43
+    tags: l_left_rail
+  l_left_rail_44:
+    number: neuron-1-44
+    tags: l_left_rail
+  l_left_rail_45:
+    number: neuron-1-45
+    tags: l_left_rail
+  l_left_rail_46:
+    number: neuron-1-46
+    tags: l_left_rail
+  l_left_rail_47:
+    number: neuron-1-47
+    tags: l_left_rail
+  l_left_rail_48:
+    number: neuron-1-48
+    tags: l_left_rail
+  l_left_rail_49:
+    number: neuron-1-49
+    tags: l_left_rail
+  l_left_rail_50:
+    number: neuron-1-50
+    tags: l_left_rail
+  l_left_rail_51:
+    number: neuron-1-51
+    tags: l_left_rail
+  l_left_rail_52:
+    number: neuron-1-52
+    tags: l_left_rail
+  l_left_rail_53:
+    number: neuron-1-53
+    tags: l_left_rail
+  l_left_rail_54:
+    number: neuron-1-54
+    tags: l_left_rail
+  l_left_rail_55:
+    number: neuron-1-55
+    tags: l_left_rail
+  l_left_rail_56:
+    number: neuron-1-56
+    tags: l_left_rail
+  l_left_rail_57:
+    number: neuron-1-57
+    tags: l_left_rail
+  l_left_rail_58:
+    number: neuron-1-58
+    tags: l_left_rail
+  l_left_rail_59:
+    number: neuron-1-59
+    tags: l_left_rail
+  l_left_rail_60:
+    number: neuron-1-60
+    tags: l_left_rail
+  l_left_rail_61:
+    number: neuron-1-61
+    tags: l_left_rail
+  l_left_rail_62:
+    number: neuron-1-62
+    tags: l_left_rail
+  l_left_rail_63:
+    number: neuron-1-63
+    tags: l_left_rail
+    
   # l_left_mass_red_crystals:
   #   number: 1
   #   tags: l_red_crystals
