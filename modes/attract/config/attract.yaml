@@ -17,6 +17,8 @@ light_player:
   mode_attract_started:
     l_left_rail:
       color: white
+    l_right_rail:
+      color: white
                  
 event_player:
   mode_attract_started: enable_storm_shadow

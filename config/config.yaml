@@ -29,7 +29,15 @@ fast:
         model: FP-EXP-1313
       neuron:
         model: FP-EXP-2000
-
+        led_ports: #must total to 128
+          - port: 1
+            count: 63
+          - port: 2
+            count: 63
+          - port: 3
+            count: 1
+          - port: 4
+            count: 1
 
 #Window is your total size for your displays, below is setup for use with one 1080p monitor.
 
