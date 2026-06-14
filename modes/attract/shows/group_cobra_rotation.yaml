@@ -6,37 +6,37 @@
 - time: 0
   lights:
     (group_a): 
-      color: 1b365d # Red
+      color: 440126 # Red
       fade: 0.111
     (group_b): 
-      color: a6192e # White
+      color: 680A3B # Purple
       fade: 0.111
     (group_c): 
-      color: 4a2e80 # Blue
+      color: 27295C # Blue
       fade: 0.111
 
 - time: 0.111
   lights:
     (group_a): 
-      color: a6192e # Fade to White
+      color: 680A3B # Purple
       fade: 0.111
     (group_b): 
-      color: 4a2e80 # Fade to Blue
+      color: 27295C # Fade to Blue
       fade: 0.111
     (group_c): 
-      color: 1b365d # Fade to Red
+      color: 440126 # Fade to Red
       fade: 0.111
 
 - time: 0.222
   lights:
     (group_a): 
-      color: 4a2e80 # Fade to Blue
+      color: 27295C # Fade to Blue
       fade: 0.111
     (group_b): 
-      color: 1b365d # Fade to Red
+      color: 440126 # Fade to Red
       fade: 0.111
     (group_c): 
-      color: a6192e # Fade to White
+      color: 680A3B # Purple
       fade: 0.111
 
 - time: 0.333
