@@ -216,6 +216,9 @@ lights:
   l_left_rail_63:
     number: neuron-1-63
     tags: l_left_rail
+  l_left_rail_64:
+    number: neuron-1-64
+    tags: l_left_rail
     
   #-----------------------------
   # Neuron Lights - Port 2 - allocation updated to 63 in config
@@ -408,6 +411,9 @@ lights:
     tags: l_right_rail
   l_right_rail_63:
     number: neuron-2-63
+    tags: l_right_rail
+  l_right_rail_64:
+    number: neuron-2-64
     tags: l_right_rail
     
   #-----------------------------

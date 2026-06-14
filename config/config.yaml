@@ -31,13 +31,15 @@ fast:
         model: FP-EXP-2000
         led_ports: #must total to 128
           - port: 1
-            count: 63
+            type: sk6812
+            count: 64
           - port: 2
-            count: 63
+            type: sk6812
+            count: 64
           - port: 3
-            count: 1
+            count: 0
           - port: 4
-            count: 1
+            count: 0
 
 #Window is your total size for your displays, below is setup for use with one 1080p monitor.
 
