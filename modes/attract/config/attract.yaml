@@ -12,11 +12,9 @@ show_player:
   mode_attract_started:
     blinking_start:
       loops: -1
-    rotate_rgb:
+    rails_red_flasher:
       loops: -1         # Infinite looping
-      speed: 1          # Normal playback speed
-      show_tokens:
-        led: l_rails  # Applies the show to all LEDs with this tag
+      speed: 30         # Normal playback speed
   
                  
 event_player:
