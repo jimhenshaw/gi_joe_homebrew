@@ -1,0 +1,14 @@
+#show_version=6
+
+- time: 0
+  lights:
+    (led): ff0000   # Red
+- time: 1
+  lights:
+    (led): 00ff00   # Green
+- time: 2
+  lights:
+    (led): 0000ff   # Blue
+- time: 3
+  lights:
+    (led): 000000   # Off (loops back to Red if configured to repeat)
