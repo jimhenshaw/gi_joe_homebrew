@@ -16,12 +16,76 @@ show_player:
       loops: -1         # Infinite looping
       speed: 1         # Normal playback speed
       show_tokens:
-        group_a: l_left_rail_1, l_left_rail_4, l_left_rail_7, l_left_rail_10, l_left_rail_13, l_left_rail_16, l_left_rail_19, l_left_rail_22, l_left_rail_25, l_left_rail_28, l_left_rail_31, l_left_rail_34, l_left_rail_37, l_left_rail_40, l_left_rail_43, l_left_rail_46, l_left_rail_49, l_left_rail_52, l_left_rail_55, l_left_rail_58, l_left_rail_61, l_left_rail_64, l_right_rail_1, l_right_rail_4, l_right_rail_7, l_right_rail_10, l_right_rail_13, l_right_rail_16, l_right_rail_19, l_right_rail_22, l_right_rail_25, l_right_rail_28, l_right_rail_31, l_right_rail_34, l_right_rail_37, l_right_rail_40, l_right_rail_43, l_right_rail_46, l_right_rail_49, l_right_rail_52, l_right_rail_55, l_right_rail_58, l_right_rail_61, l_right_rail_64
-        group_b: l_left_rail_2, l_left_rail_5, l_left_rail_8, l_left_rail_11, l_left_rail_14, l_left_rail_17, l_left_rail_20, l_left_rail_23, l_left_rail_26, l_left_rail_29, l_left_rail_32, l_left_rail_35, l_left_rail_38, l_left_rail_41, l_left_rail_44, l_left_rail_47, l_left_rail_50, l_left_rail_53, l_left_rail_56, l_left_rail_59, l_left_rail_62, l_right_rail_2, l_right_rail_5, l_right_rail_8, l_right_rail_11, l_right_rail_14, l_right_rail_17, l_right_rail_20, l_right_rail_23, l_right_rail_26, l_right_rail_29, l_right_rail_32, l_right_rail_35, l_right_rail_38, l_right_rail_41, l_right_rail_44, l_right_rail_47, l_right_rail_50, l_right_rail_53, l_right_rail_56, l_right_rail_59, l_right_rail_62
-        group_c: l_left_rail_3, l_left_rail_6, l_left_rail_9, l_left_rail_12, l_left_rail_15, l_left_rail_18, l_left_rail_21, l_left_rail_24, l_left_rail_27, l_left_rail_30, l_left_rail_33, l_left_rail_36, l_left_rail_39, l_left_rail_42, l_left_rail_45, l_left_rail_48, l_left_rail_51, l_left_rail_54, l_left_rail_57, l_left_rail_60, l_left_rail_63, l_right_rail_3, l_right_rail_6, l_right_rail_9, l_right_rail_12, l_right_rail_15, l_right_rail_18, l_right_rail_21, l_right_rail_24, l_right_rail_27, l_right_rail_30, l_right_rail_33, l_right_rail_36, l_right_rail_39, l_right_rail_42, l_right_rail_45, l_right_rail_48, l_right_rail_51, l_right_rail_54, l_right_rail_60, l_right_rail_63
+        group_a: right_group_a
+        group_b: right_group_b
+        group_c: right_group_c
+    group_cobra_rotation:
+      loops: -1         # Infinite looping
+      speed: 1         # Normal playback speed
+      show_tokens:
+        group_a: left_group_a
+        group_b: left_group_b
+        group_c: left_group_c
+  s_lower_left_flipper_active:
+    rails_lightning_strike:
+      loops: 2         # Infinite looping
+      speed: 1         # Normal playback speed
+      priority: 100
+      show_tokens:
+        group_a: group_a
+        group_b: group_b
+        group_c: group_c
+  s_lower_right_flipper_active:
+    rails_wave_pulse:
+      loops: 0       # Infinite loop while the mode is active
+      speed: 1.0      # Set to 2.0 if you want a much faster, rushing wave
+      priority: 100
+      show_tokens:
+        p1: l_left_rail_32, l_left_rail_33, l_right_rail_32, l_right_rail_33
+        p2: l_left_rail_31, l_left_rail_34, l_right_rail_31, l_right_rail_34
+        p3: l_left_rail_30, l_left_rail_35, l_right_rail_30, l_right_rail_35
+        p4: l_left_rail_29, l_left_rail_36, l_right_rail_29, l_right_rail_36
+        p5: l_left_rail_28, l_left_rail_37, l_right_rail_28, l_right_rail_37
+        p6: l_left_rail_27, l_left_rail_38, l_right_rail_27, l_right_rail_38
+        p7: l_left_rail_26, l_left_rail_39, l_right_rail_26, l_right_rail_39
+        p8: l_left_rail_25, l_left_rail_40, l_right_rail_25, l_right_rail_40
+        p9: l_left_rail_24, l_left_rail_41, l_right_rail_24, l_right_rail_41
+        p10: l_left_rail_23, l_left_rail_42, l_right_rail_23, l_right_rail_42
+        p11: l_left_rail_22, l_left_rail_43, l_right_rail_22, l_right_rail_43
+        p12: l_left_rail_21, l_left_rail_44, l_right_rail_21, l_right_rail_44
+        p13: l_left_rail_20, l_left_rail_45, l_right_rail_20, l_right_rail_45
+        p14: l_left_rail_19, l_left_rail_46, l_right_rail_19, l_right_rail_46
+        p15: l_left_rail_18, l_left_rail_47, l_right_rail_18, l_right_rail_47
+        p16: l_left_rail_17, l_left_rail_48, l_right_rail_17, l_right_rail_48
+        p17: l_left_rail_16, l_left_rail_49, l_right_rail_16, l_right_rail_49
+        p18: l_left_rail_15, l_left_rail_50, l_right_rail_15, l_right_rail_50
+        p19: l_left_rail_14, l_left_rail_51, l_right_rail_14, l_right_rail_51
+        p20: l_left_rail_13, l_left_rail_52, l_right_rail_13, l_right_rail_52
+        p21: l_left_rail_12, l_left_rail_53, l_right_rail_12, l_right_rail_53
+        p22: l_left_rail_11, l_left_rail_54, l_right_rail_11, l_right_rail_54
+        p23: l_left_rail_10, l_left_rail_55, l_right_rail_10, l_right_rail_55
+        p24: l_left_rail_9, l_left_rail_56, l_right_rail_9, l_right_rail_56
+        p25: l_left_rail_8, l_left_rail_57, l_right_rail_8, l_right_rail_57
+        p26: l_left_rail_7, l_left_rail_58, l_right_rail_7, l_right_rail_58
+        p27: l_left_rail_6, l_left_rail_59, l_right_rail_6, l_right_rail_59
+        p28: l_left_rail_5, l_left_rail_60, l_right_rail_5, l_right_rail_60
+        p29: l_left_rail_4, l_left_rail_61, l_right_rail_4, l_right_rail_61
+        p30: l_left_rail_3, l_left_rail_62, l_right_rail_3, l_right_rail_62
+        p31: l_left_rail_2, l_left_rail_63, l_right_rail_2, l_right_rail_63
+        p32: l_left_rail_1, l_left_rail_64, l_right_rail_1, l_right_rail_64
+        
+sound_player:
+  s_lower_left_flipper_active: # Must match your show_player event key exactly
+    thunder_strike:
+      volume: 0.9          # Sets playback volume (0.0 to 1.0 scale)
+      priority: 100        # High priority prevents background music from clipping it
+  s_lower_right_flipper_active: # Must match your show_player event key exactly
+    tidal_wave:
+      volume: 0.9          # Sets playback volume (0.0 to 1.0 scale)
+      priority: 100        # High priority prevents background music from clipping it
                  
 event_player:
-  mode_attract_started: enable_storm_shadow
-  s_lower_left_flipper_active: activate_storm_shadow
-  s_lower_right_flipper_active: deactivate_storm_shadow
+  #mode_attract_started: enable_storm_shadow
+  #s_lower_left_flipper_active: activate_storm_shadow
+  #s_lower_right_flipper_active: deactivate_storm_shadow
   

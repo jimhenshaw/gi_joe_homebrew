@@ -1,0 +1,63 @@
+#show_version=6
+
+# /shows/lightning_strike.yaml
+# Simulates an asymmetric, crackling lightning bolt across the rails.
+# Total duration: ~0.85 seconds. Does not loop by default (run as play-once).
+
+- time: 0
+  lights:
+    # Blinding initial strike (Pure cold white)
+    (group_a): ffffff
+    (group_b): ffffff
+    (group_c): ffffff
+
+- time: 0.050
+  lights:
+    # Sharp instantaneous black-out
+    (group_a): 000000
+    (group_b): 000000
+    (group_c): 000000
+
+- time: 0.090
+  lights:
+    # First rapid crackle repeat (Asymmetric partial rail flash)
+    (group_a): cccccc
+    (group_c): cccccc
+
+- time: 0.130
+  lights:
+    # Drop back down to darkness
+    (group_a): 000000
+    (group_c): 000000
+
+- time: 0.160
+  lights:
+    # Second smaller stutter flash
+    (group_b): aaaaaa
+
+- time: 0.200
+  lights:
+    # Brief dark pause before the residual glow
+    (group_b): 000000
+
+- time: 0.250
+  lights:
+    # Residual atmospheric ionized energy surge (electric blue/violet)
+    (group_a): 2200ff
+    (group_b): 1100aa
+    (group_c): 4400ff
+
+- time: 0.350
+  lights:
+    # Smooth, half-second linear fade-out to complete darkness
+    (group_a):
+      color: 000000
+      fade: 0.500
+    (group_b):
+      color: 000000
+      fade: 0.500
+    (group_c):
+      color: 000000
+      fade: 0.500
+
+- time: 0.850
