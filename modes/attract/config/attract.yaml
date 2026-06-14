@@ -12,10 +12,13 @@ show_player:
   mode_attract_started:
     blinking_start:
       loops: -1
-    rails_red_flasher:
+    group_patriotic_rotation:
       loops: -1         # Infinite looping
-      speed: 30         # Normal playback speed
-  
+      speed: 1         # Normal playback speed
+      show_tokens:
+        group_a: l_left_rail_1, l_left_rail_4, l_left_rail_7, l_left_rail_10, l_left_rail_13, l_left_rail_16, l_left_rail_19, l_left_rail_22, l_left_rail_25, l_left_rail_28, l_left_rail_31, l_left_rail_34, l_left_rail_37, l_left_rail_40, l_left_rail_43, l_left_rail_46, l_left_rail_49, l_left_rail_52, l_left_rail_55, l_left_rail_58, l_left_rail_61, l_left_rail_64, l_right_rail_1, l_right_rail_4, l_right_rail_7, l_right_rail_10, l_right_rail_13, l_right_rail_16, l_right_rail_19, l_right_rail_22, l_right_rail_25, l_right_rail_28, l_right_rail_31, l_right_rail_34, l_right_rail_37, l_right_rail_40, l_right_rail_43, l_right_rail_46, l_right_rail_49, l_right_rail_52, l_right_rail_55, l_right_rail_58, l_right_rail_61, l_right_rail_64
+        group_b: l_left_rail_2, l_left_rail_5, l_left_rail_8, l_left_rail_11, l_left_rail_14, l_left_rail_17, l_left_rail_20, l_left_rail_23, l_left_rail_26, l_left_rail_29, l_left_rail_32, l_left_rail_35, l_left_rail_38, l_left_rail_41, l_left_rail_44, l_left_rail_47, l_left_rail_50, l_left_rail_53, l_left_rail_56, l_left_rail_59, l_left_rail_62, l_right_rail_2, l_right_rail_5, l_right_rail_8, l_right_rail_11, l_right_rail_14, l_right_rail_17, l_right_rail_20, l_right_rail_23, l_right_rail_26, l_right_rail_29, l_right_rail_32, l_right_rail_35, l_right_rail_38, l_right_rail_41, l_right_rail_44, l_right_rail_47, l_right_rail_50, l_right_rail_53, l_right_rail_56, l_right_rail_59, l_right_rail_62
+        group_c: l_left_rail_3, l_left_rail_6, l_left_rail_9, l_left_rail_12, l_left_rail_15, l_left_rail_18, l_left_rail_21, l_left_rail_24, l_left_rail_27, l_left_rail_30, l_left_rail_33, l_left_rail_36, l_left_rail_39, l_left_rail_42, l_left_rail_45, l_left_rail_48, l_left_rail_51, l_left_rail_54, l_left_rail_57, l_left_rail_60, l_left_rail_63, l_right_rail_3, l_right_rail_6, l_right_rail_9, l_right_rail_12, l_right_rail_15, l_right_rail_18, l_right_rail_21, l_right_rail_24, l_right_rail_27, l_right_rail_30, l_right_rail_33, l_right_rail_36, l_right_rail_39, l_right_rail_42, l_right_rail_45, l_right_rail_48, l_right_rail_51, l_right_rail_54, l_right_rail_60, l_right_rail_63
                  
 event_player:
   mode_attract_started: enable_storm_shadow

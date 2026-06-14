@@ -1,0 +1,42 @@
+#show_version=6
+
+# Rotates a Red, White, and Blue pattern down the rails 3 times per second.
+# Step duration: 0.111s per step (3 steps total = ~0.333s full cycle)
+
+- time: 0
+  lights:
+    (group_a): 
+      color: ff0000 # Red
+      fade: 0.111
+    (group_b): 
+      color: ffffff # White
+      fade: 0.111
+    (group_c): 
+      color: 0000ff # Blue
+      fade: 0.111
+
+- time: 0.111
+  lights:
+    (group_a): 
+      color: ffffff # Fade to White
+      fade: 0.111
+    (group_b): 
+      color: 0000ff # Fade to Blue
+      fade: 0.111
+    (group_c): 
+      color: ff0000 # Fade to Red
+      fade: 0.111
+
+- time: 0.222
+  lights:
+    (group_a): 
+      color: 0000ff # Fade to Blue
+      fade: 0.111
+    (group_b): 
+      color: ff0000 # Fade to Red
+      fade: 0.111
+    (group_c): 
+      color: ffffff # Fade to White
+      fade: 0.111
+
+- time: 0.333
