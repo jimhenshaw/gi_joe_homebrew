@@ -16,7 +16,7 @@ show_player:
       loops: -1         # Infinite looping
       speed: 1          # Normal playback speed
       show_tokens:
-        led: l_left_rail  # Applies the show to all LEDs with this tag
+        led: l_rails  # Applies the show to all LEDs with this tag
   
                  
 event_player:
