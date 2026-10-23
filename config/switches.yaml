@@ -201,4 +201,37 @@ switches:
     #number: upper_playfield-12
     #number: upper_playfield-13
     #number: upper_playfield-14
-    #number: upper_playfield-15  
+    #number: upper_playfield-15
+   
+  #MASS LEFT VUK TEST SWITCHES 
+  s_left_mass_vuk_1:
+    number: 1
+    platform: virtual
+  s_left_mass_vuk_2:
+    number: 2
+    platform: virtual
+  s_left_mass_vuk_3:
+    number: 3
+    platform: virtual
+  s_left_mass_entrance:
+    number: 4
+    platform: virtual
+  
+  #MASS RIGHT VUK TEST SWITCHES  
+  s_right_mass_vuk_1:
+    number: 5
+    platform: virtual
+  s_right_mass_vuk_2:
+    number: 6
+    platform: virtual
+  s_right_mass_vuk_3:
+    number: 7
+    platform: virtual
+  s_right_mass_entrance:
+    number: 8
+    platform: virtual
+    
+  #SHUTTLE VUK SWITCH
+  s_shuttle_vuk:
+    number: 9
+    platform: virtual

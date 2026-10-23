@@ -421,26 +421,163 @@ lights:
   #----------------------------- 
   # Neuron Lights - Port 4 - allocation updated to 0 in config
   #----------------------------- 
-    
-  # l_left_mass_red_crystals:
-  #   number: 1
-  #   tags: l_red_crystals
-  # l_left_mass_heavy_water:
-  #   number: 2
-  #   tags: l_heavy_water
-  # l_left_mass_meteor_dust:
-  #   number: 3
-  #   tags: l_meteor_dust
-    
-  # l_right_mass_red_crystals:
-  #   number: 4
-  #   tags: l_red_crystals
-  # l_right_mass_heavy_water:
-  #   number: 5
-  #   tags: l_heavy_water
-  # l_right_mass_meteor_dust:
-  #   number: 6
-  #   tags: l_meteor_dust
+  
+  #Left MASS TEST Lights  
+  l_left_mass_red_crystals:
+    number: 1
+    platform: virtual
+    tags: l_red_crystals
+  l_left_mass_heavy_water:
+    number: 2
+    platform: virtual
+    tags: l_heavy_water
+  l_left_mass_meteor_dust:
+    number: 3
+    platform: virtual
+    tags: l_meteor_dust
+  l_left_mass_lower_4:
+    number: 4
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_5:
+    number: 5
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_6:
+    number: 6
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_7:
+    number: 7
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_8:
+    number: 8
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_9:
+    number: 9
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_10:
+    number: 10
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_lower_11:
+    number: 11
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_12:
+    number: 12
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_13:
+    number: 13
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_14:
+    number: 14
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_15:
+    number: 15
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_16:
+    number: 16
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_17:
+    number: 17
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_18:
+    number: 18
+    platform: virtual
+    tags: l_left_mass
+  l_left_mass_upper_19:
+    number: 19
+    platform: virtual
+    tags: l_left_mass
+
+  
+  #Right MASS TEST Lights    
+  l_right_mass_red_crystals:
+    number: 21
+    platform: virtual
+    tags: l_red_crystals
+  l_right_mass_heavy_water:
+    number: 22
+    platform: virtual
+    tags: l_heavy_water
+  l_right_mass_meteor_dust:
+    number: 23
+    platform: virtual
+    tags: l_meteor_dust
+  l_right_mass_lower_24:
+    number: 24
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_25:
+    number: 25
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_26:
+    number: 26
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_27:
+    number: 27
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_28:
+    number: 28
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_29:
+    number: 29
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_30:
+    number: 30
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_lower_31:
+    number: 31
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_32:
+    number: 32
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_33:
+    number: 33
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_34:
+    number: 34
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_35:
+    number: 35
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_36:
+    number: 36
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_37:
+    number: 37
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_38:
+    number: 38
+    platform: virtual
+    tags: l_right_mass
+  l_right_mass_upper_39:
+    number: 39
+    platform: virtual
+    tags: l_right_mass
     
   # l_cube_top_left_1:
   #   number: 1-1

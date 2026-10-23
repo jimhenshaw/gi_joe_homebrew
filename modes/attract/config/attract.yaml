@@ -26,6 +26,9 @@ show_player:
         group_a: left_group_a
         group_b: left_group_b
         group_c: left_group_c
+    mass_left_blue_cycle:
+      loops: -1
+      speed: 20
   s_lower_left_flipper_active:
     rails_lightning_strike:
       loops: 2         # Infinite looping
@@ -84,6 +87,12 @@ sound_player:
       volume: 0.9          # Sets playback volume (0.0 to 1.0 scale)
       priority: 100        # High priority prevents background music from clipping it
                  
+coil_player:
+  s_lower_left_flipper_active:
+    c_left_mass_vuk: pulse
+  s_lower_right_flipper_active:
+    c_right_mass_vuk: pulse
+                
 event_player:
   #mode_attract_started: enable_storm_shadow
   #s_lower_left_flipper_active: activate_storm_shadow

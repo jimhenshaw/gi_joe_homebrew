@@ -1,0 +1,44 @@
+#config_version=6
+# Weather Dominator Mode Rules
+#----------------------------------------------------------------------
+# Focused on Ramps
+# Start the mode by assembling the weather dominator
+# Hit the three ramps to start the mode
+# When started, random weather events will play and get stronger as the mode progresses
+#   - Wind – blower
+#   - Lightning – GI lighting flashes
+#   - Hail – shaker motor
+# Hit three more ramps to finish the weather dominator mode
+# Progress resets between balls
+
+mode:
+  start_events: ball_started
+  priority: 200
+
+shot_profiles:
+  off_lit:
+    states:
+      - name: off
+        show: "off"
+      - name: lit
+        show: light_color_lit_show
+
+shots:
+  red_crystal_shot:
+    switch: s_red_crystals
+    profile: off_lit
+    show_tokens:
+      light: l_red_crystals
+      color: red
+  heavy_water_shot:
+    switch: s_heavy_water
+    profile: off_lit
+    show_tokens:
+      light: l_heavy_water
+      color: blue
+  meteor_dust_shot:
+    switch: s_meteor_dust
+    profile: off_lit
+    show_tokens:
+      light: l_meteor_dust
+      color: yellow

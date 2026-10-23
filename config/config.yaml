@@ -5,6 +5,8 @@ mpf:
 
 hardware:
     platform: fast
+    lights: fast, virtual
+    switches: fast, virtual
 
 fast:
   net:
