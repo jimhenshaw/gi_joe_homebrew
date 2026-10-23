@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc2al0stw6422"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_0sfem"]
+[ext_resource type="Texture2D" uid="uid://bkgk8sho32nyg" path="res://images/base/base_green_4_3.png" id="2_0sfem"]
+[ext_resource type="VideoStream" uid="uid://dtcmndc6j0hgr" path="res://videos/MASS/mass_ready.ogv" id="3_0sfem"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_hylth"]
+[ext_resource type="FontFile" uid="uid://ruhph2o0ejl2" path="res://fonts/arial_black.ttf" id="5_k6gp8"]
+
+[node name="MassReady" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0sfem")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_0sfem")
+centered = false
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 520.0
+offset_top = 36.0
+offset_right = 1486.0
+offset_bottom = 756.0
+stream = ExtResource("3_0sfem")
+autoplay = true
+script = ExtResource("4_hylth")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Mode Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 421.0
+offset_right = 1473.0
+offset_bottom = 524.0
+theme_override_fonts/normal_font = ExtResource("5_k6gp8")
+theme_override_font_sizes/normal_font_size = 80
+text = "M.A.S.S."
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Instruction Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 525.0
+offset_right = 1476.0
+offset_bottom = 737.0
+theme_override_fonts/normal_font = ExtResource("5_k6gp8")
+theme_override_font_sizes/normal_font_size = 44
+text = "BALL LOCKS ACTIVATED"
+scroll_active = false
+horizontal_alignment = 1

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://crq57gej06abq"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_u4cvq"]
+[ext_resource type="Texture2D" uid="uid://bkgk8sho32nyg" path="res://images/base/base_green_4_3.png" id="2_u8jn5"]
+
+[node name="BaseSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u4cvq")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="BaseSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_u8jn5")
+centered = false

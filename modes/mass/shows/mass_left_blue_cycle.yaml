@@ -1,0 +1,145 @@
+#show_version=6
+- time: 0
+  lights:
+    l_left_mass_upper_12: '4E54C6'
+    l_left_mass_upper_13: '4E54C6'
+    l_left_mass_upper_14: '4E54C6'
+    l_left_mass_upper_15: '4E54C6'
+    l_left_mass_upper_16: '4E54C6'
+    l_left_mass_upper_17: '4E54C6'
+    l_left_mass_upper_18: '7D68C6'
+    l_left_mass_upper_19: '4F54C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_18: '7E68C6'
+    l_left_mass_upper_19: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_17: '5557C6'
+    l_left_mass_upper_18: '7C67C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_17: '7E68C6'
+    l_left_mass_upper_18: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_16: '6F61C6'
+    l_left_mass_upper_17: '685FC6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_16: '7E68C6'
+    l_left_mass_upper_17: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_15: '5055C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_15: '7E68C6'
+    l_left_mass_upper_16: '5256C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_16: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_14: '5658C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_14: '7E68C6'
+    l_left_mass_upper_15: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_13: '5A59C6'
+    l_left_mass_upper_14: '6B60C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_13: '7E68C6'
+    l_left_mass_upper_14: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_12: '5356C6'
+    l_left_mass_upper_13: '665EC6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_12: '7E68C6'
+    l_left_mass_upper_13: '4E54C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_12: '7363C6'
+    l_left_mass_upper_19: '5055C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_12: '4E54C6'
+    l_left_mass_upper_19: '7D68C6'
+    
+- time: '+1'
+  lights:
+    l_left_mass_upper_19: '7E68C6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    

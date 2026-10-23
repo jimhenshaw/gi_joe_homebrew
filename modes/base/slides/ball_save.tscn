@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1q8flouyyuj6"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_3qjiq"]
+[ext_resource type="Texture2D" uid="uid://6ocncc4ohr77" path="res://images/base/base_green.png" id="2_brgof"]
+[ext_resource type="Texture2D" uid="uid://be7antxq2j4lv" path="res://images/base/left_bar.png" id="3_77004"]
+[ext_resource type="Texture2D" uid="uid://fn63cfylxcy7" path="res://images/base/right_bar.png" id="4_23qvy"]
+[ext_resource type="VideoStream" uid="uid://5khbr7m47dsx" path="res://videos/base/ball_save.ogv" id="5_o26sk"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="6_8xni0"]
+
+[node name="BallSave" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3qjiq")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_brgof")
+centered = false
+
+[node name="LeftBar" type="Sprite2D" parent="."]
+scale = Vector2(1.9038461, 1.4986111)
+texture = ExtResource("3_77004")
+centered = false
+
+[node name="RightBar" type="Sprite2D" parent="."]
+position = Vector2(1624, 1)
+scale = Vector2(1.8974359, 1.4972222)
+texture = ExtResource("4_23qvy")
+centered = false
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 3.0
+offset_right = 1624.0
+offset_bottom = 1077.0
+stream = ExtResource("5_o26sk")
+autoplay = true
+expand = true
+script = ExtResource("6_8xni0")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"

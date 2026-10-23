@@ -5,7 +5,9 @@ mode:
     start_events: ball_started
     priority: 100
     
-    
+slide_player:
+  show_base_slide: joe_base_slide
+  show_ball_save: ball_save
     
 event_player:
-  mode_base_started: start_char_select
+  mode_base_started: show_base_slide

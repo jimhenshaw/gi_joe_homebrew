@@ -95,25 +95,28 @@ coils:
     number: upper_playfield-5    
     default_hold_power: 1
     #allow_enable: true #allows for power over 70%
-  c_snake_eyes_main:
+  c_left_mass_vuk:
     number: upper_playfield-6
-    default_pulse_ms: 30
-  c_snake_eyes_hold:
+    default_pulse_ms: 25
+  c_right_mass_vuk:
     number: upper_playfield-7
-    allow_enable: true #allows for power over 70%
-    default_hold_power: .9
+    default_pulse_ms: 25
     
   #---------------------
   # J4 - Drivers 8-15
   #---------------------
-  c_left_mass_vuk:
+
+  c_shuttle_vuk:
     number: upper_playfield-8
     default_pulse_ms: 25
-  c_right_mass_vuk:
+  c_snake_eyes_main:
     number: upper_playfield-9
-    default_pulse_ms: 25
+    default_pulse_ms: 30
+  c_snake_eyes_hold:
+    number: upper_playfield-10
+    allow_enable: true #allows for power over 70%
+    default_hold_power: .9
   #unused:
-    #number: upper_playfield-10
     #number: upper_playfield-11
     #number: upper_playfield-12
     #number: upper_playfield-13

@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://e7u8hgu6r1jj"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_b3bys"]
+[ext_resource type="Texture2D" uid="uid://vnov2alk52nh" path="res://images/base/base_blue_4_3.png" id="2_b3bys"]
+[ext_resource type="VideoStream" uid="uid://p0fcnfg341n5" path="res://videos/MASS/meteorite_dust_harvested_cobra.ogv" id="3_b3bys"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_ew61k"]
+[ext_resource type="FontFile" uid="uid://ruhph2o0ejl2" path="res://fonts/arial_black.ttf" id="5_bn78s"]
+
+[node name="MassMeteoriteDustHarvested" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b3bys")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_b3bys")
+centered = false
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 420.0
+offset_top = 36.0
+offset_right = 1386.0
+offset_bottom = 756.0
+stream = ExtResource("3_b3bys")
+autoplay = true
+script = ExtResource("4_ew61k")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Mode Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 421.0
+offset_right = 1370.0
+offset_bottom = 524.0
+theme_override_fonts/normal_font = ExtResource("5_bn78s")
+theme_override_font_sizes/normal_font_size = 80
+text = "M.A.S.S."
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Instruction Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 525.0
+offset_right = 1368.0
+offset_bottom = 737.0
+theme_override_fonts/normal_font = ExtResource("5_bn78s")
+theme_override_font_sizes/normal_font_size = 48
+text = "METEORITE DUST HARVESTED"
+scroll_active = false
+horizontal_alignment = 1

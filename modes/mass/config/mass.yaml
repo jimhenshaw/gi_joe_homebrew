@@ -14,16 +14,16 @@
 #----------------------------------------------------------------------
 
 mode:
-    start_events: ball_started
-    priority: 200
-    code: multiball.MultilockManipulator
+  start_events: ball_started
+  priority: 200
+  code: multiball.MultilockManipulator
     
 counters:
   mass_ball_teleport_counter:
     enable_events: enable_mass_ball_teleport_counter
     count_events: increment_teleport_counter
     count_complete_value: 3
-    events_when_complete: start_mass_multiball
+    events_when_complete: mass_teleport_completed
     
 multiballs:
   mass_multiball:
@@ -126,13 +126,54 @@ shot_groups:
       shots: red_crystal_shot, heavy_water_shot, meteor_dust_shot
       disable_events: mass_elements_shot_group_lit_complete
       
+sound_player:
+  play_mass_not_ready_sound:
+    heavy_water:
+      bus: effects
+    radioactive:
+      bus: effects
+  play_mass_multiball_instrumental:
+    mass_multiball_instrumental:
+      bus: music         
+      
+widget_player:
+  stop_mass_widgets:
+    active_mass_widgets:
+      action: remove
+  play_mass_not_ready_widget: mass_not_ready
+  play_mass_ball_locked: mass_ball_locked
+  play_mass_cobra_teleport: 
+    mass_cobra_teleport:
+      key: active_mass_widgets
+  play_mass_heavy_water_collected: mass_heavy_water_collected
+  play_mass_radioactive_crystals_gathered: mass_radioactive_crystals_gathered
+  play_mass_meteorite_dust_harvested_joe: mass_meteorite_dust_harvested_joe
+  play_mass_meteorite_dust_harvested_cobra: mass_meteorite_dust_harvested_cobra
+  play_mass_ready: mass_ready
+  play_mass_multiball_started: mass_multiball_started
+      
 event_player:
-  mass_elements_shot_group_lit_complete: enable_mass_ball_locks
+  #mode_mass_started: play_mass_radioactive_crystals_gathered
+  mass_teleport_completed: stop_mass_widgets, start_mass_multiball, play_mass_multiball_started, play_mass_multiball_instrumental
+
+  #Handle MASS Shots
+  red_crystal_shot_off_hit{device.shot_groups.mass_elements_shot_group.common_state!="lit"}: play_mass_radioactive_crystals_gathered
+  heavy_water_shot_off_hit{device.shot_groups.mass_elements_shot_group.common_state!="lit"}: play_mass_heavy_water_collected
+  meteor_dust_shot_off_hit{device.shot_groups.mass_elements_shot_group.common_state!="lit"}: play_mass_meteorite_dust_harvested_joe
+  mass_elements_shot_group_lit_complete: enable_mass_ball_locks, play_mass_ready
+  
+  #Handle MASS Ball Locks
   enable_mass_teleportation: set_mass_teleportation, enable_mass_ball_teleport_counter, set_balls_to_replace_to_zero
   mass_ball_lock_full: disable_mass_ball_lock
   multiball_lock_left_mass_ball_lock_locked_ball: check_ball_locks
+  multiball_lock_left_mass_ball_lock_locked_ball{current_player.mass_teleportation_enabled == 0}: play_mass_ball_locked
+  multiball_lock_left_mass_ball_lock_locked_ball{current_player.mass_teleportation_enabled == 1}: play_mass_cobra_teleport
   multiball_lock_right_mass_ball_lock_locked_ball: check_ball_locks
+  multiball_lock_right_mass_ball_lock_locked_ball{current_player.mass_teleportation_enabled == 0}: play_mass_ball_locked
+  multiball_lock_right_mass_ball_lock_locked_ball{current_player.mass_teleportation_enabled == 1}: play_mass_cobra_teleport
   check_ball_locks{device.ball_devices.bd_left_mass.available_balls >= 2 and device.ball_devices.bd_right_mass.available_balls >= 2}: enable_mass_teleportation
+  balldevice_bd_left_mass_ball_entered{device.multiball_locks.left_mass_ball_lock.enabled == False}: play_mass_not_ready_widget, play_mass_not_ready_sound
+  balldevice_bd_left_mass_ball_entered{device.multiball_locks.right_mass_ball_lock.enabled == False}: play_mass_not_ready_widget, play_mass_not_ready_sound
   balldevice_bd_left_mass_ball_entered{device.multiball_locks.left_mass_ball_lock.enabled == True}: update_left_mass_lights
   balldevice_bd_right_mass_ball_entered{device.multiball_locks.right_mass_ball_lock.enabled == True}: update_right_mass_lights
   balldevice_bd_left_mass_ball_entered{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_right_mass.available_balls > 0}: eject_right_mass, update_right_mass_lights, increment_teleport_counter
@@ -140,12 +181,12 @@ event_player:
   #check for full VUKs and ball went through the entrance switch
   s_left_mass_entrance_active{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_left_mass.available_balls == 3 and device.ball_devices.bd_right_mass.available_balls > 0}: eject_right_mass, update_right_mass_lights, start_left_mini_mass_multiball, increment_teleport_counter
   s_right_mass_entrance_active{current_player.mass_teleportation_enabled == 1 and device.ball_devices.bd_right_mass.available_balls == 3 and device.ball_devices.bd_left_mass.available_balls > 0}: eject_left_mass, update_right_mass_lights, start_right_mini_mass_multiball, increment_teleport_counter
-  
+
   #Update lights on ball ejection
   balldevice_bd_left_mass_ball_eject_success: update_left_mass_lights
   balldevice_bd_right_mass_ball_eject_success: update_right_mass_lights
   
-  #Handle Mass Lights after teleportation enabled
+  #Handle MASS Lights after teleportation enabled
   update_left_mass_lights: turn_off_left_mass_lights, turn_on_left_mass_lights
   update_right_mass_lights: turn_off_right_mass_lights, turn_on_right_mass_lights
   turn_on_left_mass_lights{device.ball_devices.bd_left_mass.available_balls == 3}: show_left_mass_light3
@@ -172,4 +213,9 @@ variable_player:
     mass_teleportation_enabled:
       action: set
       int: 1
+      
+  reset_mass_teleportation:
+    mass_teleportation_enabled:
+      action: set
+      int: 0
       

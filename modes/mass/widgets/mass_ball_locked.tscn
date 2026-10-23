@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckqrvcl4ivi3y"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_r5duo"]
+[ext_resource type="Texture2D" uid="uid://bkgk8sho32nyg" path="res://images/base/base_green_4_3.png" id="2_atta5"]
+[ext_resource type="VideoStream" uid="uid://4dbqj62dfo1b" path="res://videos/MASS/mass_ball_locked.ogv" id="3_atta5"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="4_ij0mn"]
+[ext_resource type="FontFile" uid="uid://ruhph2o0ejl2" path="res://fonts/arial_black.ttf" id="5_atta5"]
+
+[node name="MassCobraTeleport" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r5duo")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_atta5")
+centered = false
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 520.0
+offset_top = 36.0
+offset_right = 1486.0
+offset_bottom = 756.0
+stream = ExtResource("3_atta5")
+autoplay = true
+script = ExtResource("4_ij0mn")
+end_behavior = 1
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+
+[node name="Mode Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 421.0
+offset_right = 1471.0
+offset_bottom = 524.0
+theme_override_fonts/normal_font = ExtResource("5_atta5")
+theme_override_font_sizes/normal_font_size = 80
+text = "M.A.S.S."
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Instruction Label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 523.0
+offset_right = 1474.0
+offset_bottom = 609.0
+theme_override_fonts/normal_font = ExtResource("5_atta5")
+theme_override_font_sizes/normal_font_size = 64
+text = "BALL LOCKED
+"
+scroll_active = false
+horizontal_alignment = 1
