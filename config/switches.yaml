@@ -123,7 +123,6 @@ switches:
   #-----------------------------
   s_left_mass_vuk_1:
     number: playfield-16
-<<<<<<< HEAD
   s_left_mass_vuk_2:
     number: playfield-17
   s_left_mass_vuk_3:
@@ -134,7 +133,6 @@ switches:
     number: playfield-20
   s_right_mass_vuk_3:
     number: playfield-21
-=======
     type: NC
   s_left_mass_vuk_2:
     number: playfield-17
@@ -151,7 +149,6 @@ switches:
   s_right_mass_vuk_3:
     number: playfield-21
     type: NC
->>>>>>> b578ea1 (added NC to MASS VUK opto switches)
     
   #unused:
     #number: playfield-22
