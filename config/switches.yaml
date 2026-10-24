@@ -121,13 +121,20 @@ switches:
   #-----------------------------
     # J6 - Switch Bank 16-23
   #-----------------------------
+  s_left_mass_vuk_1:
+    number: playfield-16
+  s_left_mass_vuk_2:
+    number: playfield-17
+  s_left_mass_vuk_3:
+    number: playfield-18
+  s_right_mass_vuk_1:
+    number: playfield-19
+  s_right_mass_vuk_2:
+    number: playfield-20
+  s_right_mass_vuk_3:
+    number: playfield-21
+    
   #unused:
-    #number: playfield-16
-    #number: playfield-17
-    #number: playfield-18
-    #number: playfield-19
-    #number: playfield-20
-    #number: playfield-21
     #number: playfield-22
     #number: playfield-23
   #-----------------------------
@@ -147,21 +154,10 @@ switches:
     #number: playfield-30
     #number: playfield-31
     
-  #s_left_mass_vuk_1:
-  #  number: 1
-  #s_left_mass_vuk_2:
-  #  number: 2
-  #s_left_mass_vuk_3:
-  #  number: 3
+
   #s_left_mass_entrance:
   #  number: 4
-    
-  #s_right_mass_vuk_1:
-  #  number: 5
-  #s_right_mass_vuk_2:
-  #  number: 6
-  #s_right_mass_vuk_3:
-  #  number: 7
+  
   #s_right_mass_entrance:
   #  number: 8
  
@@ -204,32 +200,32 @@ switches:
     #number: upper_playfield-15
    
   #MASS LEFT VUK TEST SWITCHES 
-  s_left_mass_vuk_1:
-    number: 1
-    platform: virtual
-  s_left_mass_vuk_2:
-    number: 2
-    platform: virtual
-  s_left_mass_vuk_3:
-    number: 3
-    platform: virtual
-  s_left_mass_entrance:
-    number: 4
-    platform: virtual
+  #s_left_mass_vuk_1:
+  #  number: 1
+  #  platform: virtual
+  #s_left_mass_vuk_2:
+  #  number: 2
+  #  platform: virtual
+  #s_left_mass_vuk_3:
+  #  number: 3
+  #  platform: virtual
+  #s_left_mass_entrance:
+  #  number: 4
+  #  platform: virtual
   
   #MASS RIGHT VUK TEST SWITCHES  
-  s_right_mass_vuk_1:
-    number: 5
-    platform: virtual
-  s_right_mass_vuk_2:
-    number: 6
-    platform: virtual
-  s_right_mass_vuk_3:
-    number: 7
-    platform: virtual
-  s_right_mass_entrance:
-    number: 8
-    platform: virtual
+  #s_right_mass_vuk_1:
+  #  number: 5
+  #  platform: virtual
+  #s_right_mass_vuk_2:
+  #  number: 6
+  #  platform: virtual
+  #s_right_mass_vuk_3:
+  #  number: 7
+  #  platform: virtual
+  #s_right_mass_entrance:
+  #  number: 8
+  #  platform: virtual
     
   #SHUTTLE VUK SWITCH
   s_shuttle_vuk:
