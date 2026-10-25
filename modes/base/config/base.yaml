@@ -10,4 +10,4 @@ slide_player:
   show_ball_save: ball_save
     
 event_player:
-  mode_base_started: show_base_slide
+  mode_base_started: show_base_slide, enable_mass_ball_locks
