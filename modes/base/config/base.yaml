@@ -9,5 +9,11 @@ slide_player:
   show_base_slide: joe_base_slide
   show_ball_save: ball_save
     
+coil_player:
+  s_lower_left_flipper_active:
+    c_left_mass_vuk: pulse
+  s_lower_right_flipper_active:
+    c_right_mass_vuk: pulse
+    
 event_player:
   mode_base_started: show_base_slide, enable_mass_ball_locks
