@@ -71,7 +71,7 @@ playfields:
     tags: default
 
 machine:
-    balls_installed: 1
+    balls_installed: 4
 
 game:
     balls_per_game: 3
